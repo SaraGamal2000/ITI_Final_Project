@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit post{% endblock %}
+
+{% block content %}
+  <h1 style="text-align: center"> Edit the Post</h1>
+
+<form method="post" >
+  <div class="mb-3">
+    
+    <label class="form-label">Name</label>
+    <input type="text" name="name" class="form-control" value="{{post.name}}">
+  </div>
+ <div class="mb-3">
+    <label class="form-label">Image</label>
+    <input type="text" name="image" class="form-control"  value="{{post.image}}">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">description</label>
+    <input type="text" name="descrip" class="form-control"  value="{{post.descrip}}">
+  </div>
+  <button type="submit" class="btn btn-info w-100">Edit</button>
+</form>
+{% endblock %}

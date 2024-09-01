@@ -1,0 +1,37 @@
+
+  {% extends "base.html" %} 
+  {% block title %} Landing Page{% endblock %} 
+  
+  {% block content%}
+
+ 
+    <table class="table">
+      
+        <tr>
+          <td>  <h3>id</h3></td>
+          <td>  <h3>name</h3></td>
+          <td>  <h3>description</h3></td>
+          <td>  <h3>image</h3></td>
+          <td>  <h3>action </h3></td>
+        </tr>
+    
+        {% for p in posts%}
+            <tr>
+                <td>{{p.id}}</td>
+                <td>{{p.name}}</td>
+                <td>{{p.descrip}}</td>
+                <td>{{p.image}}</td>
+                <td>
+                    <a href="{{url_for('show_post', id=p.id)}}" class="btn btn-info" >Show</a>
+                    <a href="{{url_for('edit_post', id=p.id)}}" class="btn btn-info" >Edite</a>
+                    <a href="{{url_for('delete_post', id=p.id)}}" class="btn btn-info" >Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a style="text-align: center" href="{{url_for('create_post')}}" class="btn btn-info w-75 h-50" >Create New Post</a>
+
+      {%endblock%}
+    </h1>
+  </h1>
+</html>
