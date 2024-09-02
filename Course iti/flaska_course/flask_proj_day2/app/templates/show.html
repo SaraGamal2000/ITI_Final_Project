@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block title %} Show Page{% endblock %} {% block
+content%}
+<h1>
+  show details of post
+</h1>
+    <div class="card d-flex justify-content-center shadow w-25 h-25">
+
+      <img src="{{posts.image_url}}" class="card-img-top" />
+      <h3 class="card-title m-3">post number : {{posts.id}}</h3>
+      <h3 class="card-title m-3">{{posts.name}}</h3>
+
+      <p class="card-text m-3">{{posts.descrip}}</p>
+    </div>
+
+    {%endblock%}
+
