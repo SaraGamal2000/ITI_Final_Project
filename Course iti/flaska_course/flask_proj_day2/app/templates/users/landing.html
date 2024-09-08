@@ -1,0 +1,34 @@
+
+  {% extends "./base.html" %}
+  {% block title %} Landing Page{% endblock %}
+
+  {% block content%}
+
+
+    <table class="table">
+
+        <tr>
+          <td>  <h3>id</h3></td>
+          <td>  <h3>name</h3></td>
+          <td>  <h3>age</h3></td>
+          <td>  <h3>image</h3></td>
+          <td>  <h3>action </h3></td>
+        </tr>
+
+        {% for u in users%}
+            <tr>
+                <td>{{u.id}}</td>
+                <td>{{u.name}}</td>
+                <td>{{u.age}}</td>
+                <td> <img src="{{u.image_url_user}}"  width="100" height="100" ></td>
+                <td>
+                    <a href="{{url_for('users.show_user', id=u.id)}}" class="btn btn-info" >Show</a>
+                    <a href="{{url_for('users.edit_user', id=u.id)}}" class="btn btn-dark" >Edite</a>
+                    <a href="{{url_for('users.delete_user', id=u.id)}}" class="btn btn-danger" >Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a style="text-align: center" href="{{url_for('users.create_user')}}" class="btn btn-info w-75 h-50" >Create New user</a>
+
+      {%endblock%}

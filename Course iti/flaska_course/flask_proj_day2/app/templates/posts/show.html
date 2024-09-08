@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% block title %} Show Page{% endblock %} {% block
+{% extends "./base.html" %} {% block title %} Show Page{% endblock %} {% block
 content%}
 <h1>
   show details of post
@@ -10,6 +10,7 @@ content%}
       <h3 class="card-title m-3">{{posts.name}}</h3>
 
       <p class="card-text m-3">{{posts.descrip}}</p>
+        <p class="card-text m-3">{{posts.user_id}}</p>
     </div>
 
     {%endblock%}

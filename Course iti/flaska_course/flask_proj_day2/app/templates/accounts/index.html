@@ -1,0 +1,30 @@
+
+  {% extends "./base.html" %}
+  {% block title %} Landing Page{% endblock %}
+
+  {% block content%}
+
+
+    <table class="table">
+
+        <tr>
+          <td>  <h3>id</h3></td>
+          <td>  <h3>username</h3></td>
+          <td>  <h3>password</h3></td>
+          <td>  <h3>action </h3></td>
+        </tr>
+
+        {% for a in accounts%}
+            <tr>
+                <td>{{a.id}}</td>
+                <td>{{a.username}}</td>
+                <td>{{a.password}}</td>
+
+
+            </tr>
+        {% endfor %}
+    </table>
+    <a style="text-align: center" href="{{url_for('posts.create_post')}}" class="btn btn-info w-75 h-50" >Create New account</a>
+
+      {%endblock%}
+

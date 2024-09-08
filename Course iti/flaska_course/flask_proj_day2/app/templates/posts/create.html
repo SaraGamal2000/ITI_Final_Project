@@ -1,0 +1,35 @@
+{% extends './base.html' %}
+
+{% block title %}Create post{% endblock %}
+
+{% block content %}
+  <h1 style="text-align: center"> Add new Post</h1>
+
+<form method="POST" >
+  <div class="mb-3">
+    <label class="form-label">Name</label>
+    <input type="text" name="name" class="form-control" >
+  </div>
+ <div class="mb-3">
+    <label class="form-label">Image</label>
+    <input type="text" name="image" class="form-control" >
+  </div>
+  <div class="mb-3">
+    <label class="form-label">description</label>
+    <input type="text" name="descrip" class="form-control">
+  </div>
+
+  <div>
+    <label class="form-label">User</label>
+    <select class="form-select" name="user_id" required >
+      {% for u in users %}
+          <option value="{{ u.id }}">
+              {{ u.name }}
+          </option>
+      {% endfor %}
+  </select>
+</div>
+
+  <button type="submit" class="btn btn-info w-100">Add</button>
+</form>
+{% endblock %}

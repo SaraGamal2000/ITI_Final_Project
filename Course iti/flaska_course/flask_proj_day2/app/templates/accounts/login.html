@@ -1,0 +1,27 @@
+{% extends './base.html' %}
+
+{% block title %} Login account {% endblock %}
+
+{% block content %}
+
+      <ul>
+          <li><a href={{url_for('accounts.log')}}">Login</a></li>
+          <li><a href={{url_for('accounts.reg')}}">Create account</a></li>
+      </ul>
+
+    <h1>Login to your account</h1>
+    <form action="#" method="post">
+      <label for="username">Username:</label>
+      <input type="text" name="username" />
+      <label for="password">Password:</label>
+      <input type="password" name="password" />
+      <button type="submit">Submit</button>
+    </form>
+
+    {% if error %}
+    <div style="color: red;">
+        <strong>{{ error }}</strong>
+    </div>
+    {% endif %}
+
+{% endblock %}

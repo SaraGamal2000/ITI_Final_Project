@@ -1,0 +1,16 @@
+{% extends "./base.html" %} {% block title %} Show Page{% endblock %} {% block
+content%}
+<h1>
+  show details of user
+</h1>
+    <div class="card d-flex justify-content-center shadow w-25 h-25">
+
+      <img src="{{users.image_url_user}}" class="card-img-top" />
+      <h3 class="card-title m-3">user number : {{users.id}}</h3>
+      <h3 class="card-title m-3">{{users.name}}</h3>
+
+      <p class="card-text m-3">{{users.age}}</p>
+    </div>
+
+    {%endblock%}
+
