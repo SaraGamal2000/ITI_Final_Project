@@ -1,0 +1,67 @@
+
+  .hero {
+    background-image: url('../assest/img4bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+    background-color: #f05f40; 
+    height: 530px;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  .hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .bg-orange {
+    background-color: #f7941d;
+    border: none;
+    color: white;
+  }
+  
+  
+  .search-section {
+    background-color: #fff3e0; 
+    padding: 30px 0;
+  }
+  
+  .search-button {
+    background-color:orange;
+    border: none;
+    color: white;
+  }
+  
+  
+  .card-title {
+    color: orange; 
+  }
+  
+  .card-text {
+    color: #333;
+  }
+  
+ 
+  .footer {
+    background-color: #fff3e0;
+    color: white;
+  }
+  
+  .footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .footer .social-icons a {
+    color:#47320a;
+  }
+
+  span{
+    color:orange
+  }
