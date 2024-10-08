@@ -22,6 +22,7 @@ class Cart(models.Model):
 
 
 class CartItem(models.Model):
+    id = models.AutoField(primary_key=True)
     cart_id = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name='items')
     product_id = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default=1)

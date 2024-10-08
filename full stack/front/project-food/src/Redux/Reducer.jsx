@@ -1,4 +1,98 @@
 
+const cart = [];
+const CartQuantity = (state = cart, action) => {
+    const product = action.payload;
+    
+    console.log('Previous State:', state);
+    console.log('Action Received:', action);
+    switch (action.type) {
+        case "ADD_ITEM":
+            const exist = state.find((x) => x.product === product.product);
+            if (exist) {
+                // Update quantity if item already exists
+                return state.map((x) =>
+                    x.product === product.product ? { ...x, quantity: x.quantity + 1 } : x
+                );
+            } else {
+                // Add new item if not already in the cart
+                return [...state, { ...product, quantity: 1 }];
+            }
+
+        case "REMOVE_ITEM":
+            // Remove item from cart
+            return state.filter((x) => x.id !== action.payload);
+
+        case "INCREMENT_ITEM":
+            return state.map((x) =>
+                x.id === product.id ? { ...x, quantity: x.quantity + 1 } : x
+            );
+
+        case "DECREMENT_ITEM":
+            if (product.quantity === 1) {
+                // Remove item if quantity reaches 1
+                return state.filter((x) => x.id !== product.id);
+            } else {
+                // Decrease the quantity
+                return state.map((x) =>
+                    x.id === product.id ? { ...x, quantity: x.quantity - 1 } : x
+                );
+            }
+
+        default:
+            return state;
+    }
+};
+
+export default CartQuantity;
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////this code that add new prod as row///////////////////////////////////
+
+// const cart = [];
+
+// const CartQuantity = (state = cart, action) => {
+//     const product = action.payload;
+
+//     switch (action.type) {
+//         case "ADD_ITEM":
+//             const exist = state.find((x) => x.product_id === product.product_id);
+//             if (exist) {
+//                 return state.map((x) =>
+//                     x.product_id === product.product_id ? { ...x, quantity: x.quantity + 1 } : x
+//                 );
+//             } else {
+//                 return [...state, { ...product, quantity: 1 }];
+//             }
+
+//         case "REMOVE_ITEM":
+//             const exist1 = state.find((x) => x.product_id === product);
+//             if (exist1.quantity === 1) {
+//                 return state.filter((x) => x.product_id !== exist1.product_id);
+//             } else {
+//                 return state.map((x) =>
+//                     x.product_id === product ? { ...x, quantity: x.quantity - 1 } : x
+//                 );
+//             }
+//             return state;
+
+//         default:
+//             return state;
+//     }
+// };
+
+// export default CartQuantity;
+///////////////////////////////////////////////////////////////////////
+
 // const cart = [];
 
 // const CartQuantity = (state = cart, action) => {
@@ -25,55 +119,6 @@
 //     }
 // };
 // export default CartQuantity;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const cart = [];
-
-const CartQuantity = (state = cart, action) => {
-    const product = action.payload;
-
-    switch (action.type) {
-        case "ADD_ITEM":
-            const exist = state.find((x) => x.product_id === product.product_id);
-            if (exist) {
-                return state.map((x) =>
-                    x.product_id === product.product_id ? { ...x, quantity: x.quantity + 1 } : x
-                );
-            } else {
-                return [...state, { ...product, quantity: 1 }];
-            }
-
-        case "REMOVE_ITEM":
-            const exist1 = state.find((x) => x.product_id === product);
-            if (exist1.quantity === 1) {
-                return state.filter((x) => x.product_id !== exist1.product_id);
-            } else {
-                return state.map((x) =>
-                    x.product_id === product ? { ...x, quantity: x.quantity - 1 } : x
-                );
-            }
-            return state;
-
-        default:
-            return state;
-    }
-};
-
-export default CartQuantity;
-
 
 
 

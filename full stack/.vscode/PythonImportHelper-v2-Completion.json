@@ -89,6 +89,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -610,6 +626,15 @@
         "documentation": {}
     },
     {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
@@ -1049,6 +1074,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "backend.cart.migrations.0002_alter_cartitem_id",
+        "description": "backend.cart.migrations.0002_alter_cartitem_id",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('cart', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='cartitem',\n            name='id',\n            field=models.AutoField(primary_key=True, serialize=False),\n        ),",
+        "detail": "backend.cart.migrations.0002_alter_cartitem_id",
+        "documentation": {}
+    },
+    {
         "label": "CartConfig",
         "kind": 6,
         "importPath": "backend.cart.apps",
@@ -1071,7 +1105,7 @@
         "kind": 6,
         "importPath": "backend.cart.models",
         "description": "backend.cart.models",
-        "peekOfCode": "class CartItem(models.Model):\n    cart_id = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name='items')\n    product_id = models.ForeignKey(Product, on_delete=models.CASCADE)\n    quantity = models.PositiveIntegerField(default=1)\n    price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)\n# class Product(models.Model):\n#     id=models.AutoField(primary_key=True)\n#     name = models.CharField(max_length=100)\n#     price = models.DecimalField(max_digits=10, decimal_places=2)\n# class Product(models.Model):",
+        "peekOfCode": "class CartItem(models.Model):\n    id = models.AutoField(primary_key=True)\n    cart_id = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name='items')\n    product_id = models.ForeignKey(Product, on_delete=models.CASCADE)\n    quantity = models.PositiveIntegerField(default=1)\n    price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)\n# class Product(models.Model):\n#     id=models.AutoField(primary_key=True)\n#     name = models.CharField(max_length=100)\n#     price = models.DecimalField(max_digits=10, decimal_places=2)",
         "detail": "backend.cart.models",
         "documentation": {}
     },
@@ -1108,6 +1142,15 @@
         "importPath": "backend.cart.views",
         "description": "backend.cart.views",
         "peekOfCode": "def cart_items(request, item_id=None):\n    if request.method == 'GET':\n        # Fetch all cart items or a specific item if item_id is provided\n        if item_id is not None:\n            try:\n                item = CartItem.objects.get(id=item_id)\n                serializer = CartItemSerializer(item)\n                return Response(serializer.data)\n            except CartItem.DoesNotExist:\n                return Response({\"error\": \"CartItem not found.\"}, status=status.HTTP_404_NOT_FOUND)",
+        "detail": "backend.cart.views",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "backend.cart.views",
+        "description": "backend.cart.views",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n@api_view(['GET', 'POST', 'PUT', 'DELETE'])\ndef cart_items(request, item_id=None):\n    if request.method == 'GET':\n        # Fetch all cart items or a specific item if item_id is provided\n        if item_id is not None:\n            try:\n                item = CartItem.objects.get(id=item_id)\n                serializer = CartItemSerializer(item)\n                return Response(serializer.data)",
         "detail": "backend.cart.views",
         "documentation": {}
     },

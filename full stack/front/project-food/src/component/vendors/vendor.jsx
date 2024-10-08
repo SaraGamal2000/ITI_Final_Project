@@ -5,41 +5,53 @@ import { Link } from "react-router-dom";
 import formatCurrency from "../formatcurrency";
 import { useDispatch, useSelector } from "react-redux";
 // import { CartQuantity } from "../../Redux/Action";
-import { addToCart } from "../../Redux/Action";
-import { removeFromCart } from "../../Redux/Action";
+// import { addToCart } from "../../Redux/Action";
+import {
+  addToCart,
+  removeFromCart,
+  updateCartItemQuantity,
+} from "../../Redux/Action";
 
 function Product_component({ id, name, price, image }) {
   // const dispatch = useDispatch();
-  // const cartItems = useSelector((state) => state.CartQuantity); // Get cart items from Redux store
-  // const product = cartItems.find((item) => item.id === id); // Find if the product exists in the cart
-  // const quantity = product ? product.qty : 0; // Get product quantity or default to 0
+  // const cartItems = useSelector((state) => state.CartQuantity);
+  // const product = cartItems.find((item) => item.product_id === id);
+  // const quantity = product ? product.quantity : 0;
 
   // const inc_Quantity = () => {
-  //   dispatch(addToCart({ id, name, price, image })); // Dispatch addToCart action
+  //   dispatch(addToCart({ id, name, price, image }));
   // };
 
   // const dec_Quantity = () => {
   //   if (quantity > 0) {
-  //     dispatch(removeFromCart({ id, name, price, image })); // Dispatch removeFromCart action
+  //     dispatch(removeFromCart(id));
   //   }
   // };
+
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.CartQuantity);
-  const product = cartItems.find((item) => item.product_id === id);
+  const product = cartItems.find((item) => item.product === id);
   const quantity = product ? product.quantity : 0;
+  // console.log("Quantity:", quantity);
+  // console.log("product:", product);
 
   const inc_Quantity = () => {
-    dispatch(addToCart({ id, name, price, image }));
+    if (product) {
+      dispatch(updateCartItemQuantity(product.id, "increment")); // Increment if product exists
+    } else {
+      dispatch(addToCart({ id, name, price, image })); // Add to cart if it doesn't exist
+    }
   };
 
   const dec_Quantity = () => {
-    if (quantity > 0) {
-      dispatch(removeFromCart(id));
+    if (quantity > 1) {
+      dispatch(updateCartItemQuantity(product.id, "decrement")); // Decrement if quantity > 1
+    } else if (quantity === 1) {
+      dispatch(removeFromCart(product.id)); // Remove from cart if quantity is 1
     }
   };
 
   return (
-  
     <Card className="pc mb-4  shadow bg-body-tertiary">
       <Card.Body className="">
         {image && (
@@ -63,6 +75,7 @@ function Product_component({ id, name, price, image }) {
         </Card.Text>
         <div className="mt-auto">
           {quantity === 0 ? (
+            <>
             <Button
               variant="outline-warning"
               className="rounded-5 m-2 w-100  text-dark"
@@ -71,7 +84,17 @@ function Product_component({ id, name, price, image }) {
             >
               Add to cart
             </Button>
+            {/* <Button
+                  variant="outline-warning"
+                  className="rounded-circle text-dark"
+                  onClick={dec_Quantity}
+                  // onClick={onRemoveFromCart}
+                >
+                  -
+                </Button> */}
+            </>
           ) : (
+          
             <div>
               <div className="d-flex align-items-center justify-content-center">
                 <Button

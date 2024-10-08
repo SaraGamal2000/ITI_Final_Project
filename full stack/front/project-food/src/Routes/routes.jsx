@@ -21,6 +21,10 @@ const Register = lazy(() => import("../pages/signup"));
 const Cartpage = lazy(() => import("../pages/cart"));
 const About_us = lazy(() => import("../pages/about_us"));
 const ProductDetail=lazy(()=> import("../pages/product_detail_p"))
+const Profile=lazy(()=>import("../pages/profile/profile"))
+const ForgotPassword=lazy(()=>import('../pages/forgotpassword/forgotpassword'))
+const ResetPassword=lazy(()=>import('../pages/resetpassword/resetpassword'))
+
 
 // const {id}=useParams();
 
@@ -39,6 +43,12 @@ export default function AppRoute() {
             <Route path="/aboutus" element={<About_us />}></Route>
             
             <Route path="/detail/:id" element={<ProductDetail />} />
+
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/reset-password/:token" element={<ResetPassword />} />
+
+
           </Routes>
           <Footer/>
         </BrowserRouter>

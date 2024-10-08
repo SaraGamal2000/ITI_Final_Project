@@ -1,0 +1,102 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container for forms */
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Titles */
+.container h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Focus State */
+input:focus {
+    outline: none;
+    border: 1px solid #D4A152;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #C56418;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #C54418;
+
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 900;
+    color: #C55418;
+    display: inline;
+    text-align: center;
+    margin-top: 10px;
+}
+
+a:hover {
+    color: #C56418;
+}
+
+/* Error messages */
+.error {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Success messages */
+.success {
+    color: #4CAF50;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px, 20px;
+    }
+}
