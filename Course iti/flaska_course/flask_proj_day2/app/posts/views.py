@@ -5,7 +5,27 @@ from app.posts.form import PostForm
 
 # from app.model import User
 
+@posts_blueprint.route("/create", endpoint="create_post", methods=['GET', "POST"])
+def create():
+    users=User.query.all()
+    if request.method == "POST":
+        post = Post(name=request.form['name'],
+                    descrip=request.form['descrip'],
+                    image=request.form['image'],
+                    user_id=request.form['user_id'])
 
+        db.session.add(post)
+        db.session.commit()
+        return redirect(url_for("posts.land"))
+    return render_template("posts/create.html",users=users)
+
+
+@posts_blueprint.route("/edit/<int:id>", endpoint="edit_post", methods=['GET', "POST"])
+def edit(id):
+    post = Post.query.get(id)
+    if request.method == "POST":
+        post.name = request.form['name']
+        post.descrip = request.form['descrip']
 @posts_blueprint.route("/landing", endpoint="land")
 def land():
     posts=Post.query.all()
@@ -28,27 +48,7 @@ def delete_post(id):
     return redirect(url_for("posts.land"))
 
 
-@posts_blueprint.route("/create", endpoint="create_post", methods=['GET', "POST"])
-def create():
-    users=User.query.all()
-    if request.method == "POST":
-        post = Post(name=request.form['name'],
-                    descrip=request.form['descrip'],
-                    image=request.form['image'],
-                    user_id=request.form['user_id'])
 
-        db.session.add(post)
-        db.session.commit()
-        return redirect(url_for("posts.land"))
-    return render_template("posts/create.html",users=users)
-
-
-@posts_blueprint.route("/edit/<int:id>", endpoint="edit_post", methods=['GET', "POST"])
-def edit(id):
-    post = Post.query.get(id)
-    if request.method == "POST":
-        post.name = request.form['name']
-        post.descrip = request.form['descrip']
         post.image = request.form['image']
         post.user_id=request.form['user_id']
         db.session.commit()

@@ -22,6 +22,4 @@ config_option={
         'prd':Prodconfig
     }
 
-# @staticmethod
-# def init_app(app):
-#     pass
+

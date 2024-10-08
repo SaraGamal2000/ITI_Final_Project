@@ -14,8 +14,7 @@ from app.model import Account
 
 from flask_login import LoginManager
 
-login_manager = LoginManager()
-login_manager.login_view = 'accounts.log'
+
 
 
 def create_app(config_name='prd'):
@@ -41,6 +40,9 @@ def create_app(config_name='prd'):
     from app.posts.api.views import GetPosts,PostsResourse
     api.add_resource(GetPosts, '/api/posts')
     api.add_resource(PostsResourse, '/api/posts/<int:id>')
+
+    login_manager = LoginManager()
+    login_manager.login_view = 'accounts.log'
 
     login_manager.init_app(app)
 

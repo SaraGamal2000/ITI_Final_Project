@@ -27,14 +27,14 @@ def login():
         else:
             return render_template("accounts/login.html", error="Invalid username or password")
 
-        return render_template("accounts/login.html")
+    return render_template("accounts/login.html")
 
 
 @accounts_blueprint.route("/register", endpoint="reg", methods=["GET", "POST"])
 def register_user():
     accounts=Account.query.all()
     if request.method == "POST":
-        accounts = Account(username=request.form["username"],
+        accounts = Account(username = request.form["username"],
                             password=request.form["password"])
 
         db.session.add(accounts)

@@ -1,6 +1,6 @@
 
   {% extends "./base.html" %}
-  {% block title %} Landing Page{% endblock %}
+  {% block title %} index Page of account{% endblock %}
 
   {% block content%}
 
@@ -24,7 +24,7 @@
             </tr>
         {% endfor %}
     </table>
-    <a style="text-align: center" href="{{url_for('posts.create_post')}}" class="btn btn-info w-75 h-50" >Create New account</a>
+    <a style="text-align: center" href="{{url_for('accounts.reg')}}" class="btn btn-info w-75 h-50" >Create New account</a>
 
       {%endblock%}
 

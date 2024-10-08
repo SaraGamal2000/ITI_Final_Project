@@ -25,7 +25,6 @@ class User(db.Model):
     image=db.Column(db.String(50))
     posts= db.relationship('Post', backref='user')
 
-
     @property
     def image_url_user(self):
         return url_for("static", filename=f"images/{self.image}")

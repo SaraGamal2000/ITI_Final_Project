@@ -5,11 +5,6 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-# @app.route('/landing')
-# def land():
-#     return  render_template("landing.html")
-
-
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
 db=SQLAlchemy(app)
@@ -20,8 +15,7 @@ class Post(db.Model):
     name=db.Column(db.String(50))
     descrip=db.Column(db.String(300))
     image=db.Column(db.String(250))
-    def __str__(self):
-        return f"{self.name}"
+    
     
     @property
     def image_url(self):
@@ -73,7 +67,6 @@ def edit(id):
     return render_template("edit.html", post=post)
 
 
-# id,name,descriptio,image
-# id=request.form['id'],
+
 if __name__ == "__main__":
     app.run(debug=True) 

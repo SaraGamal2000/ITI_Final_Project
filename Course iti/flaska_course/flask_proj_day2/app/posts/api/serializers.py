@@ -9,10 +9,6 @@ user_serializer={
     "image": fields.String
 }
 
-image_serializer={
-
-    "name":fields.String
-}
 
 
 post_serializer={
