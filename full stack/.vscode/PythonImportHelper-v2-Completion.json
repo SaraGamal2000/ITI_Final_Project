@@ -57,38 +57,6 @@
         "documentation": {}
     },
     {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -114,78 +82,6 @@
     },
     {
         "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -278,38 +174,6 @@
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
         "documentation": {}
     },
     {
@@ -366,70 +230,6 @@
         "description": "django.apps",
         "isExtraImport": true,
         "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
         "documentation": {}
     },
     {
@@ -481,75 +281,11 @@
         "documentation": {}
     },
     {
-        "label": "receiver",
-        "importPath": "django.dispatch",
-        "description": "django.dispatch",
-        "isExtraImport": true,
-        "detail": "django.dispatch",
-        "documentation": {}
-    },
-    {
         "label": "post_save",
         "importPath": "django.db.models.signals",
         "description": "django.db.models.signals",
         "isExtraImport": true,
         "detail": "django.db.models.signals",
-        "documentation": {}
-    },
-    {
-        "label": "post_save",
-        "importPath": "django.db.models.signals",
-        "description": "django.db.models.signals",
-        "isExtraImport": true,
-        "detail": "django.db.models.signals",
-        "documentation": {}
-    },
-    {
-        "label": "serializers",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "status",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "serializers",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "status",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "viewsets",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "serializers",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
         "documentation": {}
     },
     {
@@ -625,78 +361,6 @@
         "documentation": {}
     },
     {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "include",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "include",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -769,70 +433,6 @@
         "documentation": {}
     },
     {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "timedelta",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "timedelta",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "get_object_or_404",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "get_object_or_404",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
         "label": "get_object_or_404",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -897,22 +497,6 @@
         "documentation": {}
     },
     {
-        "label": "api_view",
-        "importPath": "rest_framework.decorators",
-        "description": "rest_framework.decorators",
-        "isExtraImport": true,
-        "detail": "rest_framework.decorators",
-        "documentation": {}
-    },
-    {
-        "label": "api_view",
-        "importPath": "rest_framework.decorators",
-        "description": "rest_framework.decorators",
-        "isExtraImport": true,
-        "detail": "rest_framework.decorators",
-        "documentation": {}
-    },
-    {
         "label": "permission_classes",
         "importPath": "rest_framework.decorators",
         "description": "rest_framework.decorators",
@@ -929,14 +513,6 @@
         "documentation": {}
     },
     {
-        "label": "api_view",
-        "importPath": "rest_framework.decorators",
-        "description": "rest_framework.decorators",
-        "isExtraImport": true,
-        "detail": "rest_framework.decorators",
-        "documentation": {}
-    },
-    {
         "label": "Response",
         "importPath": "rest_framework.response",
         "description": "rest_framework.response",
@@ -958,38 +534,6 @@
         "description": "rest_framework.response",
         "isExtraImport": true,
         "detail": "rest_framework.response",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "rest_framework.response",
-        "description": "rest_framework.response",
-        "isExtraImport": true,
-        "detail": "rest_framework.response",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "rest_framework.response",
-        "description": "rest_framework.response",
-        "isExtraImport": true,
-        "detail": "rest_framework.response",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "rest_framework.response",
-        "description": "rest_framework.response",
-        "isExtraImport": true,
-        "detail": "rest_framework.response",
-        "documentation": {}
-    },
-    {
-        "label": "make_password",
-        "importPath": "django.contrib.auth.hashers",
-        "description": "django.contrib.auth.hashers",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.hashers",
         "documentation": {}
     },
     {
@@ -1025,35 +569,11 @@
         "documentation": {}
     },
     {
-        "label": "get_random_string",
-        "importPath": "django.utils.crypto",
-        "description": "django.utils.crypto",
-        "isExtraImport": true,
-        "detail": "django.utils.crypto",
-        "documentation": {}
-    },
-    {
         "label": "send_mail",
         "importPath": "django.core.mail",
         "description": "django.core.mail",
         "isExtraImport": true,
         "detail": "django.core.mail",
-        "documentation": {}
-    },
-    {
-        "label": "send_mail",
-        "importPath": "django.core.mail",
-        "description": "django.core.mail",
-        "isExtraImport": true,
-        "detail": "django.core.mail",
-        "documentation": {}
-    },
-    {
-        "label": "timezone",
-        "importPath": "django.utils",
-        "description": "django.utils",
-        "isExtraImport": true,
-        "detail": "django.utils",
         "documentation": {}
     },
     {
@@ -1082,22 +602,6 @@
         "documentation": {}
     },
     {
-        "label": "get_asgi_application",
-        "importPath": "django.core.asgi",
-        "description": "django.core.asgi",
-        "isExtraImport": true,
-        "detail": "django.core.asgi",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
         "label": "Path",
         "importPath": "pathlib",
         "description": "pathlib",
@@ -1111,30 +615,6 @@
         "description": "rest_framework_simplejwt.views",
         "isExtraImport": true,
         "detail": "rest_framework_simplejwt.views",
-        "documentation": {}
-    },
-    {
-        "label": "TokenObtainPairView",
-        "importPath": "rest_framework_simplejwt.views",
-        "description": "rest_framework_simplejwt.views",
-        "isExtraImport": true,
-        "detail": "rest_framework_simplejwt.views",
-        "documentation": {}
-    },
-    {
-        "label": "static",
-        "importPath": "django.conf.urls.static",
-        "description": "django.conf.urls.static",
-        "isExtraImport": true,
-        "detail": "django.conf.urls.static",
-        "documentation": {}
-    },
-    {
-        "label": "static",
-        "importPath": "django.conf.urls.static",
-        "description": "django.conf.urls.static",
-        "isExtraImport": true,
-        "detail": "django.conf.urls.static",
         "documentation": {}
     },
     {
@@ -1162,30 +642,6 @@
         "documentation": {}
     },
     {
-        "label": "get_wsgi_application",
-        "importPath": "django.core.wsgi",
-        "description": "django.core.wsgi",
-        "isExtraImport": true,
-        "detail": "django.core.wsgi",
-        "documentation": {}
-    },
-    {
-        "label": "Product",
-        "importPath": "product.models",
-        "description": "product.models",
-        "isExtraImport": true,
-        "detail": "product.models",
-        "documentation": {}
-    },
-    {
-        "label": "Product",
-        "importPath": "product.models",
-        "description": "product.models",
-        "isExtraImport": true,
-        "detail": "product.models",
-        "documentation": {}
-    },
-    {
         "label": "Product",
         "importPath": "product.models",
         "description": "product.models",
@@ -1207,23 +663,6 @@
         "description": "rest_framework.routers",
         "isExtraImport": true,
         "detail": "rest_framework.routers",
-        "documentation": {}
-    },
-    {
-        "label": "DefaultRouter",
-        "importPath": "rest_framework.routers",
-        "description": "rest_framework.routers",
-        "isExtraImport": true,
-        "detail": "rest_framework.routers",
-        "documentation": {}
-    },
-    {
-        "label": "sys",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
         "documentation": {}
     },
     {
@@ -1233,6 +672,15 @@
         "importPath": "logging",
         "description": "logging",
         "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
         "documentation": {}
     },
     {
@@ -1258,564 +706,6 @@
         "description": "flatted",
         "isExtraImport": true,
         "detail": "flatted",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "ITI_Graduation_Project.full stack.backend.account.migrations.0001_initial",
-        "description": "ITI_Graduation_Project.full stack.backend.account.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Profile',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
-        "detail": "ITI_Graduation_Project.full stack.backend.account.migrations.0001_initial",
-        "documentation": {}
-    },
-    {
-        "label": "AccountConfig",
-        "kind": 6,
-        "importPath": "ITI_Graduation_Project.full stack.backend.account.apps",
-        "description": "ITI_Graduation_Project.full stack.backend.account.apps",
-        "peekOfCode": "class AccountConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'account'",
-        "detail": "ITI_Graduation_Project.full stack.backend.account.apps",
-        "documentation": {}
-    },
-    {
-        "label": "Profile",
-        "kind": 6,
-        "importPath": "ITI_Graduation_Project.full stack.backend.account.models",
-        "description": "ITI_Graduation_Project.full stack.backend.account.models",
-        "peekOfCode": "class Profile(models.Model):\n    user = models.OneToOneField(User,related_name='profile', on_delete=models.CASCADE)\n    reset_password_token = models.CharField(max_length=50,default=\"\",blank=True)\n    reset_password_expire = models.DateTimeField(null=True,blank=True)\n@receiver(post_save, sender=User)\ndef save_profile(sender,instance, created, **kwargs):\n    print('instance',instance)\n    user = instance\n    if created:\n        profile = Profile(user = user)",
-        "detail": "ITI_Graduation_Project.full stack.backend.account.models",
-        "documentation": {}
-    },
-    {
-        "label": "save_profile",
-        "kind": 2,
-        "importPath": "ITI_Graduation_Project.full stack.backend.account.models",
-        "description": "ITI_Graduation_Project.full stack.backend.account.models",
-        "peekOfCode": "def save_profile(sender,instance, created, **kwargs):\n    print('instance',instance)\n    user = instance\n    if created:\n        profile = Profile(user = user)\n        profile.save()",
-        "detail": "ITI_Graduation_Project.full stack.backend.account.models",
-        "documentation": {}
-    },
-    {
-        "label": "SingUpSerializer",
-        "kind": 6,
-        "importPath": "ITI_Graduation_Project.full stack.backend.account.serializers",
-        "description": "ITI_Graduation_Project.full stack.backend.account.serializers",
-        "peekOfCode": "class SingUpSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = User\n        fields = ('first_name','last_name', 'email', 'password')\n        extra_kwargs = {\n            'first_name': {'required':True ,'allow_blank':False},\n            'last_name' : {'required':True ,'allow_blank':False},\n            'email' : {'required':True ,'allow_blank':False},\n            'password' : {'required':True ,'allow_blank':False,'min_length':8}\n        }",
-        "detail": "ITI_Graduation_Project.full stack.backend.account.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "UserSerializer",
-        "kind": 6,
-        "importPath": "ITI_Graduation_Project.full stack.backend.account.serializers",
-        "description": "ITI_Graduation_Project.full stack.backend.account.serializers",
-        "peekOfCode": "class UserSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = User\n        fields = ('first_name','last_name', 'email', 'username')",
-        "detail": "ITI_Graduation_Project.full stack.backend.account.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "urlpatterns",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.account.urls",
-        "description": "ITI_Graduation_Project.full stack.backend.account.urls",
-        "peekOfCode": "urlpatterns = [\n    path('register/', views.register,name='register'), \n    path('userinfo/', views.current_user,name='user_info'), \n    path('reset_password/<str:token>', views.reset_password,name='reset_password'), \n    path('userinfo/update/', views.update_user,name='update_user'), \n    path('forgot_password/', views.forgot_password,name='forgot_password'), \n]",
-        "detail": "ITI_Graduation_Project.full stack.backend.account.urls",
-        "documentation": {}
-    },
-    {
-        "label": "register",
-        "kind": 2,
-        "importPath": "ITI_Graduation_Project.full stack.backend.account.views",
-        "description": "ITI_Graduation_Project.full stack.backend.account.views",
-        "peekOfCode": "def register(request):\n    data = request.data\n    user = SingUpSerializer(data = data)\n    if user.is_valid():\n        if not User.objects.filter(username=data['email']).exists():\n            user = User.objects.create(\n                first_name = data['first_name'],\n                last_name = data['last_name'], \n                email = data['email'] , \n                username = data['email'] , ",
-        "detail": "ITI_Graduation_Project.full stack.backend.account.views",
-        "documentation": {}
-    },
-    {
-        "label": "current_user",
-        "kind": 2,
-        "importPath": "ITI_Graduation_Project.full stack.backend.account.views",
-        "description": "ITI_Graduation_Project.full stack.backend.account.views",
-        "peekOfCode": "def current_user(request):\n    user = UserSerializer(request.user, many=False)\n    return Response(user.data)\n@api_view(['PUT'])\n@permission_classes([IsAuthenticated])\ndef update_user(request):\n    user = request.user\n    data = request.data\n    user.first_name = data['first_name']\n    user.username = data['email']",
-        "detail": "ITI_Graduation_Project.full stack.backend.account.views",
-        "documentation": {}
-    },
-    {
-        "label": "update_user",
-        "kind": 2,
-        "importPath": "ITI_Graduation_Project.full stack.backend.account.views",
-        "description": "ITI_Graduation_Project.full stack.backend.account.views",
-        "peekOfCode": "def update_user(request):\n    user = request.user\n    data = request.data\n    user.first_name = data['first_name']\n    user.username = data['email']\n    user.last_name = data['last_name']\n    user.email = data['email']\n    if data['password'] != \"\":\n        user.password =  make_password(data['password'])\n    user.save()",
-        "detail": "ITI_Graduation_Project.full stack.backend.account.views",
-        "documentation": {}
-    },
-    {
-        "label": "get_current_host",
-        "kind": 2,
-        "importPath": "ITI_Graduation_Project.full stack.backend.account.views",
-        "description": "ITI_Graduation_Project.full stack.backend.account.views",
-        "peekOfCode": "def get_current_host(request):\n    protocol = request.is_secure() and 'https' or 'http'\n    host = request.get_host()\n    return \"{protocol}://{host}/\".format(protocol=protocol, host=host)\n@api_view(['POST'])\ndef forgot_password(request):\n    data = request.data\n    user = get_object_or_404(User,email=data['email'])\n    token = get_random_string(40)\n    # expire_date = datetime.now() + timedelta(minutes=30)",
-        "detail": "ITI_Graduation_Project.full stack.backend.account.views",
-        "documentation": {}
-    },
-    {
-        "label": "forgot_password",
-        "kind": 2,
-        "importPath": "ITI_Graduation_Project.full stack.backend.account.views",
-        "description": "ITI_Graduation_Project.full stack.backend.account.views",
-        "peekOfCode": "def forgot_password(request):\n    data = request.data\n    user = get_object_or_404(User,email=data['email'])\n    token = get_random_string(40)\n    # expire_date = datetime.now() + timedelta(minutes=30)\n    expire_date = timezone.now() + timedelta(minutes=30)\n    user.profile.reset_password_token = token\n    user.profile.reset_password_expire = expire_date\n    user.profile.save()\n    host = get_current_host(request)",
-        "detail": "ITI_Graduation_Project.full stack.backend.account.views",
-        "documentation": {}
-    },
-    {
-        "label": "reset_password",
-        "kind": 2,
-        "importPath": "ITI_Graduation_Project.full stack.backend.account.views",
-        "description": "ITI_Graduation_Project.full stack.backend.account.views",
-        "peekOfCode": "def reset_password(request,token):\n    data = request.data\n    user = get_object_or_404(User,profile__reset_password_token = token)\n    if user.profile.reset_password_expire.replace(tzinfo=None) < datetime.now():\n        return Response({'error': 'Token is expired'},status=status.HTTP_400_BAD_REQUEST)\n    if data['password'] != data['confirmPassword']:\n        return Response({'error': 'Password are not same'},status=status.HTTP_400_BAD_REQUEST)\n    user.password = make_password(data['password'])\n    user.profile.reset_password_token = \"\"\n    user.profile.reset_password_expire = None ",
-        "detail": "ITI_Graduation_Project.full stack.backend.account.views",
-        "documentation": {}
-    },
-    {
-        "label": "application",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.asgi",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.asgi",
-        "peekOfCode": "application = get_asgi_application()",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.asgi",
-        "documentation": {}
-    },
-    {
-        "label": "BASE_DIR",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-o*p!f8l7)v&u-le)ow^4&qhm-#6@lu(duhm36d0e8qwudmpz%4'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "SECRET_KEY",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-o*p!f8l7)v&u-le)ow^4&qhm-#6@lu(duhm36d0e8qwudmpz%4'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "DEBUG",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "ALLOWED_HOSTS",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'product.apps.ProductConfig',",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "INSTALLED_APPS",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'product.apps.ProductConfig',\n    'rest_framework_simplejwt',\n    'account.apps.AccountConfig',",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "MIDDLEWARE",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n    'corsheaders.middleware.CorsMiddleware',\n]",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "CORS_ALLOW_ALL_ORIGINS",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "CORS_ALLOW_ALL_ORIGINS = [\n    'http://localhost:3000',\n]\nCORS_ALLOW_ALL_ORIGINS = True\n# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\n# EMAIL_HOST = 'smtp.gmail.com'  \n# EMAIL_PORT = 587\nEMAIL_USE_TLS = True\nEMAIL_HOST = 'sandbox.atmp.mailtrap.io'\nEMAIL_HOST_USER = '3e96ac3962b774'",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "CORS_ALLOW_ALL_ORIGINS",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "CORS_ALLOW_ALL_ORIGINS = True\n# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\n# EMAIL_HOST = 'smtp.gmail.com'  \n# EMAIL_PORT = 587\nEMAIL_USE_TLS = True\nEMAIL_HOST = 'sandbox.atmp.mailtrap.io'\nEMAIL_HOST_USER = '3e96ac3962b774'\nEMAIL_HOST_PASSWORD = 'ffea0df9396a61'\nEMAIL_PORT = '2525'\nEMAIL_USE_SSL: False",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "EMAIL_USE_TLS",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "EMAIL_USE_TLS = True\nEMAIL_HOST = 'sandbox.atmp.mailtrap.io'\nEMAIL_HOST_USER = '3e96ac3962b774'\nEMAIL_HOST_PASSWORD = 'ffea0df9396a61'\nEMAIL_PORT = '2525'\nEMAIL_USE_SSL: False\nROOT_URLCONF = 'backend.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "EMAIL_HOST",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "EMAIL_HOST = 'sandbox.atmp.mailtrap.io'\nEMAIL_HOST_USER = '3e96ac3962b774'\nEMAIL_HOST_PASSWORD = 'ffea0df9396a61'\nEMAIL_PORT = '2525'\nEMAIL_USE_SSL: False\nROOT_URLCONF = 'backend.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "EMAIL_HOST_USER",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "EMAIL_HOST_USER = '3e96ac3962b774'\nEMAIL_HOST_PASSWORD = 'ffea0df9396a61'\nEMAIL_PORT = '2525'\nEMAIL_USE_SSL: False\nROOT_URLCONF = 'backend.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "EMAIL_HOST_PASSWORD",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "EMAIL_HOST_PASSWORD = 'ffea0df9396a61'\nEMAIL_PORT = '2525'\nEMAIL_USE_SSL: False\nROOT_URLCONF = 'backend.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "EMAIL_PORT",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "EMAIL_PORT = '2525'\nEMAIL_USE_SSL: False\nROOT_URLCONF = 'backend.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "ROOT_URLCONF",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "ROOT_URLCONF = 'backend.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "TEMPLATES",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "WSGI_APPLICATION",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'backend.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\nREST_FRAMEWORK = {",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "DATABASES",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "REST_FRAMEWORK",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_RENDERER_CLASSES': (\n        'rest_framework.renderers.JSONRenderer',\n        'rest_framework.renderers.BrowsableAPIRenderer',\n     ),\n}\nSIMPLE_JWT = {",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "SIMPLE_JWT",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "SIMPLE_JWT = {\n    'ACCESS_TOKEN_LIFETIME': timedelta(days=15),\n    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),\n    'BLACKLIST_AFTER_ROTATION':True,\n    'AUTH_HEADER_TYPES': ('Bearer',),\n    'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "AUTH_PASSWORD_VALIDATORS",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "LANGUAGE_CODE",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "TIME_ZONE",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nimport os",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "USE_I18N",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nimport os\n# MEDIA_URL = '/media/'",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "USE_TZ",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nimport os\n# MEDIA_URL = '/media/'\n# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "STATIC_URL",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nimport os\n# MEDIA_URL = '/media/'\n# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "DEFAULT_AUTO_FIELD",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nimport os\n# MEDIA_URL = '/media/'\n# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "MEDIA_URL",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "MEDIA_ROOT",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'media')",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "urlpatterns",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.urls",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('api/',include('cart.urls')),\n    path('api/', include('product.urls')),\n    path('api/', include('account.urls')),\n    path('api/token/', TokenObtainPairView.as_view()),\n]\n# +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.urls",
-        "documentation": {}
-    },
-    {
-        "label": "application",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.backend.wsgi",
-        "description": "ITI_Graduation_Project.full stack.backend.backend.wsgi",
-        "peekOfCode": "application = get_wsgi_application()",
-        "detail": "ITI_Graduation_Project.full stack.backend.backend.wsgi",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "ITI_Graduation_Project.full stack.backend.cart.migrations.0001_initial",
-        "description": "ITI_Graduation_Project.full stack.backend.cart.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('product', '0002_product_image'),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Cart',\n            fields=[",
-        "detail": "ITI_Graduation_Project.full stack.backend.cart.migrations.0001_initial",
-        "documentation": {}
-    },
-    {
-        "label": "CartConfig",
-        "kind": 6,
-        "importPath": "ITI_Graduation_Project.full stack.backend.cart.apps",
-        "description": "ITI_Graduation_Project.full stack.backend.cart.apps",
-        "peekOfCode": "class CartConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'cart'",
-        "detail": "ITI_Graduation_Project.full stack.backend.cart.apps",
-        "documentation": {}
-    },
-    {
-        "label": "Cart",
-        "kind": 6,
-        "importPath": "ITI_Graduation_Project.full stack.backend.cart.models",
-        "description": "ITI_Graduation_Project.full stack.backend.cart.models",
-        "peekOfCode": "class Cart(models.Model):\n    user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)\n    id = models.AutoField(primary_key=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    is_paid = models.BooleanField(default=False)\n    total_price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)\n    def update_total_price(self):\n        self.total_price = sum(item.price * item.quantity for item in self.items.all())\n        self.save()\nclass CartItem(models.Model):",
-        "detail": "ITI_Graduation_Project.full stack.backend.cart.models",
-        "documentation": {}
-    },
-    {
-        "label": "CartItem",
-        "kind": 6,
-        "importPath": "ITI_Graduation_Project.full stack.backend.cart.models",
-        "description": "ITI_Graduation_Project.full stack.backend.cart.models",
-        "peekOfCode": "class CartItem(models.Model):\n    cart_id = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name='items')\n    product_id = models.ForeignKey(Product, on_delete=models.CASCADE)\n    quantity = models.PositiveIntegerField(default=1)\n    price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)\n# class Product(models.Model):\n#     id=models.AutoField(primary_key=True)\n#     name = models.CharField(max_length=100)\n#     price = models.DecimalField(max_digits=10, decimal_places=2)\n# class Product(models.Model):",
-        "detail": "ITI_Graduation_Project.full stack.backend.cart.models",
-        "documentation": {}
-    },
-    {
-        "label": "CartItemSerializer",
-        "kind": 6,
-        "importPath": "ITI_Graduation_Project.full stack.backend.cart.serializers",
-        "description": "ITI_Graduation_Project.full stack.backend.cart.serializers",
-        "peekOfCode": "class CartItemSerializer(serializers.ModelSerializer):\n    # product_name = serializers.StringRelatedField(read_only=True)  # Show product name\n    product_name = serializers.CharField(source='product_id.name', read_only=True) \n    Product_image = serializers.ImageField(source='product_id.image', read_only=True)  #show the product image\n    class Meta:\n        model = CartItem\n        fields = ['product_name','product_id', 'quantity','cart_id','price','Product_image']\nclass CartSerializer(serializers.ModelSerializer):\n    items = CartItemSerializer(many=True)\n    class Meta:",
-        "detail": "ITI_Graduation_Project.full stack.backend.cart.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "CartSerializer",
-        "kind": 6,
-        "importPath": "ITI_Graduation_Project.full stack.backend.cart.serializers",
-        "description": "ITI_Graduation_Project.full stack.backend.cart.serializers",
-        "peekOfCode": "class CartSerializer(serializers.ModelSerializer):\n    items = CartItemSerializer(many=True)\n    class Meta:\n        model = Cart\n        fields = ['id', 'user', 'created_at','is_paid','items','total_price']\n    def create(self, validated_data):\n        items_data = validated_data.pop('items')\n        cart = Cart.objects.create(**validated_data)\n        for item_data in items_data:\n            CartItem.objects.create(cart_id=cart, **item_data)",
-        "detail": "ITI_Graduation_Project.full stack.backend.cart.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "urlpatterns",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.cart.urls",
-        "description": "ITI_Graduation_Project.full stack.backend.cart.urls",
-        "peekOfCode": "urlpatterns = [\n    path('cart-items/', cart_items, name='cart-items'),  \n    path('cart-items/<int:item_id>/', cart_items, name='delete-cart-item'),\n]\n#////////////////////////////////////////////////////\n# router = DefaultRouter()\n# router.register(r'carts', CartView)  \n# router.register(r'cart-items', CartItemView)\n# urlpatterns = [\n#     path('', include(router.urls)),  ",
-        "detail": "ITI_Graduation_Project.full stack.backend.cart.urls",
-        "documentation": {}
-    },
-    {
-        "label": "cart_items",
-        "kind": 2,
-        "importPath": "ITI_Graduation_Project.full stack.backend.cart.views",
-        "description": "ITI_Graduation_Project.full stack.backend.cart.views",
-        "peekOfCode": "def cart_items(request, item_id=None):\n    if request.method == 'GET':\n        # Fetch all cart items or a specific item if item_id is provided\n        if item_id is not None:\n            try:\n                item = CartItem.objects.get(id=item_id)\n                serializer = CartItemSerializer(item)\n                return Response(serializer.data)\n            except CartItem.DoesNotExist:\n                return Response({\"error\": \"CartItem not found.\"}, status=status.HTTP_404_NOT_FOUND)",
-        "detail": "ITI_Graduation_Project.full stack.backend.cart.views",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "ITI_Graduation_Project.full stack.backend.product.migrations.0001_initial",
-        "description": "ITI_Graduation_Project.full stack.backend.product.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Product',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
-        "detail": "ITI_Graduation_Project.full stack.backend.product.migrations.0001_initial",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "ITI_Graduation_Project.full stack.backend.product.migrations.0002_product_image",
-        "description": "ITI_Graduation_Project.full stack.backend.product.migrations.0002_product_image",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('product', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='product',\n            name='image',\n            field=models.ImageField(blank=True, null=True, upload_to='products_images/'),\n        ),",
-        "detail": "ITI_Graduation_Project.full stack.backend.product.migrations.0002_product_image",
-        "documentation": {}
-    },
-    {
-        "label": "ProductConfig",
-        "kind": 6,
-        "importPath": "ITI_Graduation_Project.full stack.backend.product.apps",
-        "description": "ITI_Graduation_Project.full stack.backend.product.apps",
-        "peekOfCode": "class ProductConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'product'",
-        "detail": "ITI_Graduation_Project.full stack.backend.product.apps",
-        "documentation": {}
-    },
-    {
-        "label": "Category",
-        "kind": 6,
-        "importPath": "ITI_Graduation_Project.full stack.backend.product.models",
-        "description": "ITI_Graduation_Project.full stack.backend.product.models",
-        "peekOfCode": "class Category(models.TextChoices):\n    CONFECTIONERY = 'Confectionery'\n    BEVERAGES = 'Beverages'\n    MEAT = 'Meat'\nclass Product(models.Model):\n    user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)\n    name = models.CharField(max_length=200,default=\"\",blank=False)\n    description = models.TextField(max_length=1000,default=\"\",blank=False)\n    price = models.DecimalField(max_digits=7,decimal_places=2,default=0)\n    brand = models.CharField(max_length=200,default=\"\",blank=False)",
-        "detail": "ITI_Graduation_Project.full stack.backend.product.models",
-        "documentation": {}
-    },
-    {
-        "label": "Product",
-        "kind": 6,
-        "importPath": "ITI_Graduation_Project.full stack.backend.product.models",
-        "description": "ITI_Graduation_Project.full stack.backend.product.models",
-        "peekOfCode": "class Product(models.Model):\n    user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)\n    name = models.CharField(max_length=200,default=\"\",blank=False)\n    description = models.TextField(max_length=1000,default=\"\",blank=False)\n    price = models.DecimalField(max_digits=7,decimal_places=2,default=0)\n    brand = models.CharField(max_length=200,default=\"\",blank=False)\n    category = models.CharField(max_length=40,choices=Category.choices)\n    ratings = models.DecimalField(max_digits=3,decimal_places=2,default=0)\n    stock = models.IntegerField(default=0)\n    createAt = models.DateTimeField(auto_now_add=True)",
-        "detail": "ITI_Graduation_Project.full stack.backend.product.models",
-        "documentation": {}
-    },
-    {
-        "label": "ProductSerializer",
-        "kind": 6,
-        "importPath": "ITI_Graduation_Project.full stack.backend.product.serializers",
-        "description": "ITI_Graduation_Project.full stack.backend.product.serializers",
-        "peekOfCode": "class ProductSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Product\n        fields = \"__all__\"",
-        "detail": "ITI_Graduation_Project.full stack.backend.product.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "urlpatterns",
-        "kind": 5,
-        "importPath": "ITI_Graduation_Project.full stack.backend.product.urls",
-        "description": "ITI_Graduation_Project.full stack.backend.product.urls",
-        "peekOfCode": "urlpatterns = [\n    path('products/', views.get_all_products,name='products'),\n    path('products/<int:pk>/', views.get_by_id_product,name='get_by_id_product'),\n]\n# +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
-        "detail": "ITI_Graduation_Project.full stack.backend.product.urls",
-        "documentation": {}
-    },
-    {
-        "label": "get_all_products",
-        "kind": 2,
-        "importPath": "ITI_Graduation_Project.full stack.backend.product.views",
-        "description": "ITI_Graduation_Project.full stack.backend.product.views",
-        "peekOfCode": "def get_all_products(request):\n    products= Product.objects.all()\n    serializer = ProductSerializer(products,many=True)\n    print(products)\n    return Response({\"products\":serializer.data})\n@api_view(['GET'])\ndef get_by_id_product(request,pk):\n    products = get_object_or_404(Product,id=pk)\n    serializer = ProductSerializer(products,many=False)\n    print(products)",
-        "detail": "ITI_Graduation_Project.full stack.backend.product.views",
-        "documentation": {}
-    },
-    {
-        "label": "get_by_id_product",
-        "kind": 2,
-        "importPath": "ITI_Graduation_Project.full stack.backend.product.views",
-        "description": "ITI_Graduation_Project.full stack.backend.product.views",
-        "peekOfCode": "def get_by_id_product(request,pk):\n    products = get_object_or_404(Product,id=pk)\n    serializer = ProductSerializer(products,many=False)\n    print(products)\n    return Response({\"products\":serializer.data})\n# @api_view(['GET'])\n# def get_all_products(request):\n#     products = Product.objects.all()  # Get all products\n#     serializer = ProductSerializer(products, many=True)  # Serialize products\n#     return Response(serializer.data)  # Return JSON response",
-        "detail": "ITI_Graduation_Project.full stack.backend.product.views",
-        "documentation": {}
-    },
-    {
-        "label": "main",
-        "kind": 2,
-        "importPath": "ITI_Graduation_Project.full stack.backend.manage",
-        "description": "ITI_Graduation_Project.full stack.backend.manage",
-        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
-        "detail": "ITI_Graduation_Project.full stack.backend.manage",
         "documentation": {}
     },
     {
@@ -2233,6 +1123,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "backend.cart.migrations.0003_order",
+        "description": "backend.cart.migrations.0003_order",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('cart', '0002_alter_cartitem_id'),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Order',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "backend.cart.migrations.0003_order",
+        "documentation": {}
+    },
+    {
         "label": "CartConfig",
         "kind": 6,
         "importPath": "backend.cart.apps",
@@ -2255,7 +1154,16 @@
         "kind": 6,
         "importPath": "backend.cart.models",
         "description": "backend.cart.models",
-        "peekOfCode": "class CartItem(models.Model):\n    id = models.AutoField(primary_key=True)\n    cart_id = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name='items')\n    product_id = models.ForeignKey(Product, on_delete=models.CASCADE)\n    quantity = models.PositiveIntegerField(default=1)\n    price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)\n# class Product(models.Model):\n#     id=models.AutoField(primary_key=True)\n#     name = models.CharField(max_length=100)\n#     price = models.DecimalField(max_digits=10, decimal_places=2)",
+        "peekOfCode": "class CartItem(models.Model):\n    id = models.AutoField(primary_key=True)\n    cart_id = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name='items')\n    product_id = models.ForeignKey(Product, on_delete=models.CASCADE)\n    quantity = models.PositiveIntegerField(default=1)\n    price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)\nclass Order(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    cart = models.ForeignKey('Cart', on_delete=models.CASCADE)  # Link to Cart\n    total_price = models.DecimalField(max_digits=10, decimal_places=2)",
+        "detail": "backend.cart.models",
+        "documentation": {}
+    },
+    {
+        "label": "Order",
+        "kind": 6,
+        "importPath": "backend.cart.models",
+        "description": "backend.cart.models",
+        "peekOfCode": "class Order(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    cart = models.ForeignKey('Cart', on_delete=models.CASCADE)  # Link to Cart\n    total_price = models.DecimalField(max_digits=10, decimal_places=2)\n    payment_status = models.CharField(max_length=20)\n    created_at = models.DateTimeField(auto_now_add=True)\n    address = models.CharField(max_length=255)\n    items = models.ManyToManyField(CartItem)\n    def __str__(self):\n        return f\"Order {self.id} by {self.user.username} (Cart {self.cart.id})\"",
         "detail": "backend.cart.models",
         "documentation": {}
     },
@@ -2278,11 +1186,20 @@
         "documentation": {}
     },
     {
+        "label": "OrderSerializer",
+        "kind": 6,
+        "importPath": "backend.cart.serializers",
+        "description": "backend.cart.serializers",
+        "peekOfCode": "class OrderSerializer(serializers.ModelSerializer):\n    items = CartItemSerializer(many=True, read_only=True)  # عرض عناصر السلة المرتبطة بالطلب\n    class Meta:\n        model = Order\n        fields = ['id', 'user', 'cart', 'total_price', 'payment_status', 'created_at', 'address', 'items']\n        read_only_fields = ['id', 'created_at', 'total_price', 'items']\n    def create(self, validated_data):\n        cart = validated_data['cart']\n        cart.update_total_price()\n        validated_data['total_price'] = cart.total_price",
+        "detail": "backend.cart.serializers",
+        "documentation": {}
+    },
+    {
         "label": "urlpatterns",
         "kind": 5,
         "importPath": "backend.cart.urls",
         "description": "backend.cart.urls",
-        "peekOfCode": "urlpatterns = [\n    path('cart-items/', cart_items, name='cart-items'),  \n    path('cart-items/<int:item_id>/', cart_items, name='delete-cart-item'),\n]\n#////////////////////////////////////////////////////\n# router = DefaultRouter()\n# router.register(r'carts', CartView)  \n# router.register(r'cart-items', CartItemView)\n# urlpatterns = [\n#     path('', include(router.urls)),  ",
+        "peekOfCode": "urlpatterns = [\n    path('cart-items/', cart_items, name='cart-items'),  \n    path('cart-items/<int:item_id>/', cart_items, name='delete-cart-item'),\n    path('create-order/', create_order, name='create-order'),\n]\n#////////////////////////////////////////////////////\n# router = DefaultRouter()\n# router.register(r'carts', CartView)  \n# router.register(r'cart-items', CartItemView)\n# urlpatterns = [",
         "detail": "backend.cart.urls",
         "documentation": {}
     },
@@ -2291,7 +1208,16 @@
         "kind": 2,
         "importPath": "backend.cart.views",
         "description": "backend.cart.views",
-        "peekOfCode": "def cart_items(request, item_id=None):\n    if request.method == 'GET':\n        # Fetch all cart items or a specific item if item_id is provided\n        if item_id is not None:\n            try:\n                item = CartItem.objects.get(id=item_id)\n                serializer = CartItemSerializer(item)\n                return Response(serializer.data)\n            except CartItem.DoesNotExist:\n                return Response({\"error\": \"CartItem not found.\"}, status=status.HTTP_404_NOT_FOUND)",
+        "peekOfCode": "def cart_items(request, item_id=None):\n    if request.method == 'GET':\n        if item_id is not None:\n            try:\n                item = CartItem.objects.get(id=item_id)\n                serializer = CartItemSerializer(item)\n                return Response(serializer.data)\n            except CartItem.DoesNotExist:\n                return Response({\"error\": \"CartItem not found.\"}, status=status.HTTP_404_NOT_FOUND)\n        items = CartItem.objects.all()",
+        "detail": "backend.cart.views",
+        "documentation": {}
+    },
+    {
+        "label": "create_order",
+        "kind": 2,
+        "importPath": "backend.cart.views",
+        "description": "backend.cart.views",
+        "peekOfCode": "def create_order(request):\n    if request.user.is_authenticated:\n        try:\n            cart_id = request.data.get('cart_id')\n            cart = Cart.objects.get(id=cart_id,is_paid=False)\n            serializer = OrderSerializer(data={\n                'user': request.user.id,  \n                'cart': cart_id,\n                'address': request.data.get('address'),\n            })",
         "detail": "backend.cart.views",
         "documentation": {}
     },
@@ -2300,7 +1226,7 @@
         "kind": 5,
         "importPath": "backend.cart.views",
         "description": "backend.cart.views",
-        "peekOfCode": "logger = logging.getLogger(__name__)\n@api_view(['GET', 'POST', 'PUT', 'DELETE'])\ndef cart_items(request, item_id=None):\n    if request.method == 'GET':\n        # Fetch all cart items or a specific item if item_id is provided\n        if item_id is not None:\n            try:\n                item = CartItem.objects.get(id=item_id)\n                serializer = CartItemSerializer(item)\n                return Response(serializer.data)",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n@api_view(['GET', 'POST', 'PUT', 'DELETE'])\ndef cart_items(request, item_id=None):\n    if request.method == 'GET':\n        if item_id is not None:\n            try:\n                item = CartItem.objects.get(id=item_id)\n                serializer = CartItemSerializer(item)\n                return Response(serializer.data)\n            except CartItem.DoesNotExist:",
         "detail": "backend.cart.views",
         "documentation": {}
     },

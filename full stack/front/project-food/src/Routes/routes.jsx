@@ -24,7 +24,7 @@ const ProductDetail=lazy(()=> import("../pages/product_detail_p"))
 const Profile=lazy(()=>import("../pages/profile/profile"))
 const ForgotPassword=lazy(()=>import('../pages/forgotpassword/forgotpassword'))
 const ResetPassword=lazy(()=>import('../pages/resetpassword/resetpassword'))
-
+const Order=lazy(()=>import('../pages/order/order_paga'))
 
 // const {id}=useParams();
 
@@ -47,7 +47,7 @@ export default function AppRoute() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/reset-password/:token" element={<ResetPassword />} />
-
+            <Route path="/order" element={<Order/>}/>
 
           </Routes>
           <Footer/>

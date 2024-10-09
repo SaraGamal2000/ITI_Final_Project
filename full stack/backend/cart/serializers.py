@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from product.models import Product
-from .models import Cart, CartItem
+from .models import Cart, CartItem, Order
 
 class CartItemSerializer(serializers.ModelSerializer):
     # product_name = serializers.StringRelatedField(read_only=True)  # Show product name
@@ -44,3 +44,27 @@ class CartSerializer(serializers.ModelSerializer):
         
         instance.update_total_price()
         return instance
+    #//////////////////////////////////////////////////////////////////order
+class OrderSerializer(serializers.ModelSerializer):
+    items = CartItemSerializer(many=True, read_only=True)  # عرض عناصر السلة المرتبطة بالطلب
+
+    class Meta:
+        model = Order
+        fields = ['id', 'user', 'cart', 'total_price', 'payment_status', 'created_at', 'address', 'items']
+        read_only_fields = ['id', 'created_at', 'total_price', 'items']
+
+    def create(self, validated_data):
+      
+        cart = validated_data['cart']
+        cart.update_total_price()
+        validated_data['total_price'] = cart.total_price
+        
+       
+        order = super().create(validated_data)
+
+        
+        cart_items = cart.items.all()
+        for item in cart_items:
+            order.items.add(item)  
+
+        return order
