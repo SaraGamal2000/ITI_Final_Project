@@ -1,0 +1,61 @@
+.login {
+}
+
+.login .container {
+    margin-block: 40px;
+    margin-bottom: 100px;
+}
+
+.login .login-container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login .title {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.login label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+    font-size: 18px;
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.login form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.login .Error {
+    font-size: 16px;
+    margin-block: 16px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(213, 20, 20);
+}

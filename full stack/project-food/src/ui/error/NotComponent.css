@@ -1,0 +1,13 @@
+.notcomponent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    width: 100%;
+}
+
+.notcomponent .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

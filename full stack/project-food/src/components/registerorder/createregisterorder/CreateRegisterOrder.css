@@ -1,0 +1,87 @@
+.createregisterorder .container {
+    margin-block: 100px;
+    margin-bottom: 100px;
+}
+
+.createregisterorder .content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.createregisterorder .title {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.createregisterorder .content .top .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.createregisterorder .content hr {
+    margin-block: 20px;
+}
+
+.createregisterorder .content .error {
+    color: rgb(201, 22, 22);
+}
+
+.createregisterorder .content .info {
+    margin-block: 30px;
+}
+
+.createregisterorder label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.createregisterorder textarea,
+.createregisterorder input,
+.createregisterorder select {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+    font-size: 18px;
+}
+
+.createregisterorder textarea:focus,
+.createregisterorder input:focus,
+.createregisterorder select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.createregisterorder textarea {
+    resize: none;
+    min-height: 300px;
+    width: 100%;
+    resize: none;
+}
+
+.createregisterorder form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.createregisterorder .buttons {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 20px;
+}

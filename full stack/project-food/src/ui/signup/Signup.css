@@ -1,0 +1,113 @@
+.signup .container {
+    margin-block: 100px;
+    margin-bottom: 100px;
+    user-select: none;
+}
+
+.signup .signup-container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.signup .title {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.signup form > div {
+    position: relative;
+}
+
+.signup label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+.signup input,
+.signup input {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+    font-size: 18px;
+}
+
+.signup input:focus,
+.signup input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.signup ion-icon {
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 10px);
+    font-size: 25px;
+    cursor: pointer;
+    pointer-events: visible;
+    z-index: 3;
+    width: 30px;
+    height: 30px;
+}
+
+.signup form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    width: 100%;
+}
+
+.signup .Error {
+    font-size: 16px;
+    margin-block: 16px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(213, 20, 20);
+}
+
+.signup .other {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.signup .other p {
+    font-size: 20px;
+}
+
+.signup .other div {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+    gap: 20px;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .signup .other div {
+        flex-wrap: wrap;
+    }
+}
+
+.signup .other div button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 100%;
+    text-align: center;
+    user-select: none;
+}

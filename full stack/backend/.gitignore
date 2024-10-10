@@ -1,0 +1,22 @@
+#
+/.venv/
+__pycache__/
+migrations/
+migrations
+notes
+notes/
+wvenv
+wvenv/
+venv
+venv/
+myvenv/
+myvenv
+
+
+# Distribution / packaging
+.dist/
+.build/
+db.sqlite3
+
+# Local configuration
+.idea

@@ -1,0 +1,75 @@
+.listorderscompany .container {
+    margin-block: 40px;
+    margin-bottom: 100px;
+}
+
+.listorderscompany .list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.listorderscompany .item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    border: 1px solid var(--raisin-black-1);
+    border-radius: 8px;
+    /* background-color: var(--alice-blue); */
+    transition: var(--transition);
+}
+
+@media (max-width: 767px) {
+    .listorderscompany .item {
+        flex-direction: column;
+    }
+}
+
+.listorderscompany .item:hover {
+    background-color: var(--cultured-1);
+}
+
+.listorderscompany .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 25px;
+}
+
+.listorderscompany .info .id {
+    font-weight: bold;
+    color: var(--orange-soda);
+}
+
+.listorderscompany .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.listorderscompany .add-btn {
+    background-color: var(--cadet);
+}
+
+.listorderscompany .view-btn {
+    background-color: var(--yellow-green);
+}
+
+.listorderscompany .update-btn {
+    background-color: var(--orange-soda);
+}
+
+.listorderscompany .delete-btn {
+    background-color: var(--prussian-blue);
+}
+
+.listorderscompany .back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 30px;
+}

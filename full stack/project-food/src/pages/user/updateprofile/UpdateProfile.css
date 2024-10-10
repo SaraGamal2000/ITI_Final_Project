@@ -1,0 +1,92 @@
+.editprofile {
+}
+
+.editprofile .container {
+    margin-block: 40px;
+    margin-bottom: 100px;
+}
+
+.editprofile .content {
+    /* width: 100%;
+    display: flex;
+    align-items: center; */
+    /* justify-content: space-between; */
+    /* gap: 50px; */
+    /* margin-block: 50px; */
+
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.editprofile .title {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.editprofile .content .top .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.editprofile .content hr {
+    margin-block: 20px;
+}
+
+.editprofile .content .error {
+    color: rgb(201, 22, 22);
+}
+
+.editprofile .content .info {
+    margin-block: 30px;
+}
+
+.editprofile label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.editprofile textarea,
+.editprofile input {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+    font-size: 18px;
+}
+
+.editprofile textarea:focus,
+.editprofile input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.editprofile textarea {
+    resize: none;
+    min-height: 300px;
+    width: 100%;
+    resize: none;
+}
+
+.editprofile form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.editprofile .buttons {
+    display: flex;
+    gap: 20px;
+}
