@@ -92,7 +92,8 @@ post_save.connect(save_user_profile, sender=User)
 
 
 # =================================================================
-# Produc
+# Product
+
 class ProductApi(models.Model):
     STATUS = (
         ("Active", "Active"),

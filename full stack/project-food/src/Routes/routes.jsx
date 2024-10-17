@@ -194,9 +194,13 @@ export default function AppRoute() {
                             />
 
                             {/* details order */}
-                            <Route
+                            {/* <Route
                                 path={`/${App_User}/detailsorder/:slug/`}
                                 element={<DetailsOrder />}
+                            /> */}
+                            <Route
+                                path={`/${App_User}/detailsorder/:slug/`}
+                                element={<ProductDetail />}
                             />
                         </Route>
 
@@ -207,10 +211,7 @@ export default function AppRoute() {
                             <Route path="/vendors" element={<Vendorspage />} />
                             <Route path="/cart" element={<Cartpage />} />
                             <Route path="/aboutus" element={<About_us />} />
-                            <Route
-                                path="/detailsproject/:slug/"
-                                element={<ProductDetail />}
-                            />
+                         
                             <Route path="/profile" element={<Profile />} />
                             <Route path="/order" element={<Order />} />
 

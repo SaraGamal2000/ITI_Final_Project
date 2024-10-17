@@ -226,7 +226,7 @@ function Home_p() {
                                             onClick={() => {
                                                 // window.open(`/detailsproject/${slug}`, "_blank")
                                                 navigate(
-                                                    `/detailsproject/${chef.slug}`
+                                                    `/${App_User}/detailsorder/${chef.slug}`
                                                 );
                                             }}
                                         >

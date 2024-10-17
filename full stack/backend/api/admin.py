@@ -18,4 +18,6 @@ class ProfileAdmin(admin.ModelAdmin):
 
 admin.site.register(api_models.User, UserAdmin)
 admin.site.register(api_models.Profile, ProfileAdmin)
+admin.site.register(api_models.ProductApi )
+
 
