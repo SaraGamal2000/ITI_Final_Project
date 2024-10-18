@@ -38,7 +38,7 @@ const Vendorspage = lazy(() => import("../pages/vedore"));
 const Register = lazy(() => import("../pages/signup"));
 const Cartpage = lazy(() => import("../pages/cart"));
 const About_us = lazy(() => import("../pages/about_us"));
-const ProductDetail = lazy(() => import("../pages/product_detail_p"));
+const ProductDetail = lazy(() => import("../pages/product_detail_page"));
 const Profile = lazy(() => import("../pages/profile/profile"));
 const ForgotPassword = lazy(() =>
     import("../pages/forgotpassword/forgotpassword")
@@ -211,7 +211,8 @@ export default function AppRoute() {
                             <Route path="/vendors" element={<Vendorspage />} />
                             <Route path="/cart" element={<Cartpage />} />
                             <Route path="/aboutus" element={<About_us />} />
-                         
+                         {/* <Route path="/detailsproject/:slug/" element={<ProductDetail />}/> */}
+                            <Route path="/detail/:id" element={<ProductDetail />} />
                             <Route path="/profile" element={<Profile />} />
                             <Route path="/order" element={<Order />} />
 

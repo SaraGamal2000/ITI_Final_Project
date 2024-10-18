@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from product.models import Product
-from .models import Cart, CartItem, Order
+from .models import Cart, CartItem, Order, OrderItem
 
 
 class CartItemSerializer(serializers.ModelSerializer):
@@ -20,6 +20,7 @@ class CartItemSerializer(serializers.ModelSerializer):
             "price",
             "Product_image",
         ]
+
 
 
 class CartSerializer(serializers.ModelSerializer):
@@ -56,38 +57,23 @@ class CartSerializer(serializers.ModelSerializer):
         instance.update_total_price()
         return instance
 
-    # //////////////////////////////////////////////////////////////////order
+    #//////////////////////////////////////////////////////////////////order
 
+class OrderItemSerializer(serializers.ModelSerializer):
+    product_name = serializers.CharField(source='product_id.name', read_only=True) 
+    Product_image = serializers.ImageField(source='product_id.image', read_only=True)
+    class Meta:
+        model = OrderItem
+        fields = ['id', 'order_id', 'product_id', 'quantity', 'price','product_name','Product_image']
 
 class OrderSerializer(serializers.ModelSerializer):
-    items = CartItemSerializer(
-        many=True, read_only=True
-    )  # عرض عناصر السلة المرتبطة بالطلب
+    items = OrderItemSerializer(many=True, read_only=True)
 
     class Meta:
         model = Order
-        fields = [
-            "id",
-            "user",
-            "cart",
-            "total_price",
-            "payment_status",
-            "created_at",
-            "address",
-            "items",
-        ]
-        read_only_fields = ["id", "created_at", "total_price", "items"]
+        fields = ['id', 'user', 'created_at', 'total_price', 'shipping_address', 'status', 'payment_method', 'items']
 
-    def create(self, validated_data):
 
-        cart = validated_data["cart"]
-        cart.update_total_price()
-        validated_data["total_price"] = cart.total_price
 
-        order = super().create(validated_data)
 
-        cart_items = cart.items.all()
-        for item in cart_items:
-            order.items.add(item)
-
-        return order
+    

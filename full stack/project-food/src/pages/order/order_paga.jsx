@@ -1,120 +1,182 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-export default function Order_p() {
-    const [product, setProduct] = useState(null);
-    const [error, setError] = useState(false);
+const CreateOrder = () => {
+  const [shippingAddress, setShippingAddress] = useState("");
+  const [paymentMethod, setPaymentMethod] = useState("");
+  // const [cartItem,setcartItem]=useState([])
+  const [orderDetails, setOrderDetails] = useState(null);
+  const [error, setError] = useState(null);
+  const [successMessage, setSuccessMessage] = useState("");
 
-    // Store the token once. Ideally, this should be done after logging in.
-    const token =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5Nzc2OTM4LCJpYXQiOjE3Mjg0ODA5MzgsImp0aSI6IjZlZTM5ZjNlNDE0ODRiMDI4YzAxYzM0ODE1YzlhNjU4IiwidXNlcl9pZCI6MX0.zYgwQ3L7FrXI0CYyELbke9-DuAqa6KAnQd_vkCdwomk";
-    localStorage.setItem("accessToken", token);
+  // useEffect(()=>{
+  //   const res_item = await axios.get(
+  //     'http://127.0.0.1:8080/api/orders/${}', )
 
-    useEffect(() => {
-        const createOrder = async () => {
-            // Retrieve the token from localStorage
-            const token = localStorage.getItem("accessToken");
-
-            // Ensure that token exists before making the request
-            if (!token) {
-                console.error("No access token found");
-                setError(true);
-                return;
-            }
-
-            try {
-                const response = await axios.post(
-                    `http://localhost:8080/api/create-order/`, // Make sure to use backticks for template strings
-                    {
-                        // This is the data being sent in the body of the request
-                        cart_id: 1,
-                        address: "123 Main Street, City",
-                        payment_status: "pending",
-                    },
-                    {
-                        // This is where you add the headers
-                        headers: {
-                            Authorization: `Bearer ${token}`, // Include the token in the Authorization header
-                            "Content-Type": "application/json",
-                        },
-                    }
-                );
-
-                console.log("API response:", response.data);
-                setProduct(response.data.products);
-            } catch (error) {
-                console.log(
-                    "Error:",
-                    error.response ? error.response.data : error.message
-                );
-                setError(true);
-            }
-        };
-
-        createOrder();
-    }, []);
-
-    return (
-        <>
-            <React.Fragment>
-                {error && (
-                    <h1 className="m-5 text-center">there are "error"</h1>
-                )}
-                {product && <h1 className="m-5">success</h1>}{" "}
-            </React.Fragment>
-        </>
+  // },[])
+  const createOrder = async () => {
+    localStorage.setItem(
+      "accessToken",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMwMTA3NTY0LCJpYXQiOjE3Mjg4MTE1NjQsImp0aSI6IjY3MmFlNWIwMWEzZTRlNzk4NmI2YjYyODEyZTU3YjRiIiwidXNlcl9pZCI6MX0.lsTyEiBUSgmBc_e7SCvJTfeqZXBbpOGfvUFE1HgOHcg"
     );
-}
+    const token = localStorage.getItem("accessToken");
 
-// import React, { useEffect, useState } from "react";
-// import axios from "axios";
-// // import { useParams } from "react-router-dom";
+    if (!token) {
+      console.error("No access token found");
+      return;
+    }
 
-// export default function Order_p() {
-//   const [product, setProduct] = useState(null);
-//   const [error, setError] = useState(false);
-//   const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5Nzc2OTM4LCJpYXQiOjE3Mjg0ODA5MzgsImp0aSI6IjZlZTM5ZjNlNDE0ODRiMDI4YzAxYzM0ODE1YzlhNjU4IiwidXNlcl9pZCI6MX0.zYgwQ3L7FrXI0CYyELbke9-DuAqa6KAnQd_vkCdwomk";
-//   localStorage.setItem("accessToken", token);
-//   // const token = localStorage.getItem("accessToken",);
-//   useEffect(() => {
-//     const createOrder = async () => {
-//       const token = localStorage.getItem("accessToken");
-//       try {
-//         const response = await axios.post(
-//           `http://localhost:8080/api/create-order/`,
-//           {
-//             method: "POST",
-//             headers: {
-//               Authorization: `Bearer ${token}`, // Include the token in the Authorization header
-//               "Content-Type": "application/json",
-//             },
-//             cart_id: 1,
-//             address: "123 Main Street, City",
-//             payment_status: "pending",
-//           }
-//         );
+    try {
+   
+      const response = await axios.post(
+        "http://127.0.0.1:8000/api/orders/create/",
+        {
+          shipping_address: shippingAddress,
+          payment_method: paymentMethod,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
-//         console.log("API response:", response.data);
-//         setProduct(response.data.products);
-//       } catch (error) {
-//         console.log(
-//           "Error:",
-//           error.response ? error.response.data : error.message
-//         );
-//         setError(true);
-//       }
-//     };
+      console.log("Order created successfully:", response.data);
 
-//     createOrder();
-//   }, []);
+      if (response.data && response.data.order_id) {
+        const res_item = await axios.get(
+          `http://127.0.0.1:8000/api/orders/${response.data.order_id}/`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+          }
+        );
 
-//   return (
-//     <>
-//       <React.Fragment>
-//         {error && <h1>there are  "error"</h1>}
-//         {product && <h1>success</h1>}{" "}
+        setOrderDetails(res_item.data);
+        setSuccessMessage(
+          "Your order has been placed successfully and will arrive within 48 hours!"
+        
+      } else {
+        setError("Order ID not found");
+      }
+    } catch (error) {
+      console.error(
+        "Error creating order or fetching details:",
+        error.response ? error.response.data : error.message
+      );
+    }
+  };
 
-//       </React.Fragment>
-//     </>
-//   );
-// }
+  return (
+    <div className="container mt-5">
+      <h2 className="mb-4">please enter your address & payment_method</h2>
+      {successMessage && (
+        <div className="alert alert-success " role="alert">
+          {successMessage}
+        </div>
+      )}
+      <div className="mb-3">
+        <label className="form-label"> Address</label>
+        <input
+          type="text"
+          className="form-control"
+          value={shippingAddress}
+          onChange={(e) => setShippingAddress(e.target.value)}
+        />
+      </div>
+      <div className="mb-3">
+        <label className="form-label">Payment Method</label>
+        <input
+          type="text"
+          className="form-control"
+          value={paymentMethod}
+          onChange={(e) => setPaymentMethod(e.target.value)}
+        />
+      </div>
+      <button onClick={createOrder} className="btn btn-primary mb-5">
+        Create Order
+      </button>
+
+      {error && <div className="alert alert-danger">{error}</div>}
+
+      {orderDetails && (
+        <div className="card">
+          <div className="card-header">
+            <h3>Order Details</h3>
+          </div>
+          <div className="card-body">
+            <p>
+              <strong>Order ID:</strong> {orderDetails.id}
+            </p>
+            <p>
+              <strong>User ID:</strong> {orderDetails.user}
+            </p>
+            <p>
+              <strong>Created At:</strong>{" "}
+              {new Date(orderDetails.created_at).toLocaleString()}
+            </p>
+            <p>
+              <strong>Total Price:</strong> ${orderDetails.total_price}
+            </p>
+            <p>
+              <strong>Shipping Address:</strong> {orderDetails.shipping_address}
+            </p>
+            <p>
+              <strong>Payment Method:</strong> {orderDetails.payment_method}
+            </p>
+            <p>
+              <strong>Status:</strong> {orderDetails.status}
+            </p>
+
+            <h4 className="mt-4">your products</h4>
+            <div className="row">
+              {orderDetails.items && orderDetails.items.length > 0 ? (
+                orderDetails.items.map((item, index) => (
+                  <div className="col-md-4 " key={index}>
+                    <div className="card mb-4 ">
+                      <img
+                        src={`http://localhost:8000${item.Product_image}`}
+                        className="card-img-top"
+                        alt={item.product_name}
+                        style={{ height: '200px', objectFit: 'cover' }}
+                      />
+                      <div className="card-body">
+                        <h5 className="card-title">{item.product_name}</h5>
+                        <p className="card-text">Quantity: {item.quantity}</p>
+                        <p className="card-text">Price: ${item.price}</p>
+                      </div>
+                    </div>
+                  </div>
+                  // <div className="d-flex" key={index}>
+                  //   <div className="rounded-5 d-flex">
+                  //     <img
+                  //       src={`http://localhost:8080${item.Product_image}`}
+                  //       // className="card-img-top"
+                  //       alt={item.product_name}
+                  //       style={{ height: "100px" }}
+                  //     />
+
+                  //     <h5 className="bg-danger">{item.product_name}</h5>
+                  //     <p className="card-text">Quantity: {item.quantity}</p>
+                  //     <p className="card-text">Price: ${item.price}</p>
+                  //   </div>
+                  // </div>
+                ))
+              ) : (
+                <p>No items in this order.</p>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+ 
+};
+
+export default CreateOrder;
+
+
