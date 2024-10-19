@@ -8,7 +8,7 @@ from django.core.validators import RegexValidator
 from shortuuid.django_fields import ShortUUIDField
 import shortuuid
 
-#
+
 from django.conf import settings
 
 
