@@ -69,7 +69,7 @@ const LandingPage = () => {
                                 <CookIcon sx={{ fontSize: 70 }} />
                             </Avatar>
                             <Typography variant="h4" sx={{ marginTop: "20px" }}>
-                                Welcome to Cook Project!
+                                Welcome to HomeBites!
                             </Typography>
                             <Typography
                                 variant="body1"

@@ -71,7 +71,7 @@ export default function SideBar({ open, handleDrawerClose }) {
     const navigate = useNavigate();
 
     const pages = [
-        { text: "Home", route: "/", icon: <HomeIcon /> },
+        { text: "Home", route:`/${App_Admin}/landing-page`, icon: <HomeIcon /> },
         {
             text: "FoodList",
             route: `/${App_Admin}/food-list`,

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom"; // Import Link and useNavigate
-import api from "../../utils/api";
+import api from "../../utils/api.js";
 import Swal from "sweetalert2";
 
 const CategoryList = () => {
@@ -76,7 +76,7 @@ const CategoryList = () => {
             <hr />
 
             {/* Add New Category Button */}
-            <Link to="/add-category">
+            <Link to="/admin/add-category">
                 <button
                     style={{
                         padding: "10px 20px",

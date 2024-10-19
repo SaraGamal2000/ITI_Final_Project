@@ -21,6 +21,7 @@ from django.http import HttpResponseRedirect
 # Restframework
 from rest_framework import status
 from rest_framework.decorators import api_view, APIView
+from rest_framework.exceptions import PermissionDenied, NotFound
 from rest_framework.response import Response
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework import generics
@@ -45,7 +46,12 @@ import random
 # Custom Imports
 from api import serializer as api_serializer
 from api import models as api_models
-
+from django.shortcuts import render
+from rest_framework import viewsets
+from .models import Food, Category, UserProfile
+from .serializer import FoodSerializer, CategorySerializer, UserProfileSerializer
+from django.http import JsonResponse
+from django.db.models import Q
 
 # =================================================================
 # *** Admin ***
@@ -363,3 +369,54 @@ class ProductDeleteAPIView(generics.DestroyAPIView):
             return api_models.ProductApi.objects.all()
         else:
             return api_models.ProductApi.objects.filter(user=user)
+
+
+
+
+
+
+
+
+class FoodViewSet(viewsets.ModelViewSet):
+    queryset = Food.objects.all()
+    serializer_class = FoodSerializer
+
+class CategoryViewSet(viewsets.ModelViewSet):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+class UserProfileViewSet(viewsets.ModelViewSet):
+    queryset = UserProfile.objects.all()
+    serializer_class = UserProfileSerializer
+
+
+# Food Search
+def food_search(request):
+    query = request.GET.get('q', '')  # Get search query from the request
+    if query:
+        # Search for food items whose name contains the search query
+        results = Food.objects.filter(Q(name__icontains=query))
+    else:
+        results = Food.objects.all()  # If no query, return all items
+    data = list(results.values())  # Convert QuerySet to a list of dictionaries
+    return JsonResponse(data, safe=False)
+
+# Category Search
+def category_search(request):
+    query = request.GET.get('q', '')
+    if query:
+        results = Category.objects.filter(Q(name__icontains=query))
+    else:
+        results = Category.objects.all()
+    data = list(results.values())
+    return JsonResponse(data, safe=False)
+
+# User Search
+def user_search(request):
+    query = request.GET.get('q', '')
+    if query:
+        results = UserProfile.objects.filter(Q(name__icontains=query))
+    else:
+        results = UserProfile.objects.all()
+    data = list(results.values())
+    return JsonResponse(data, safe=False)

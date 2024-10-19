@@ -12,7 +12,7 @@ const FoodList = () => {
     }, []);
 
     const fetchFoods = () => {
-        api.get("foods/")
+        api.get('/productapi/lists/')
             .then((res) => setFoods(res.data))
             .catch((err) => console.error(err));
     };
@@ -76,7 +76,7 @@ const FoodList = () => {
             <hr />
 
             {/* Add New Food Button */}
-            <Link to="/add-food">
+            <Link to="/admin/add-food">
                 <button
                     style={{
                         padding: "10px 15px",

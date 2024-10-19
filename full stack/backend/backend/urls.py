@@ -26,6 +26,8 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+
+from api import views
 from api.views import *
 
 schema_view = get_schema_view(
@@ -49,6 +51,12 @@ urlpatterns = [
     # path("api/", include("account.urls")),
     path("api/token/", TokenObtainPairView.as_view()),
     path("api/v1/", include("api.urls")),
+    path('admin/', admin.site.urls),
+    path('api/', include('api.urls')),
+    path('api/foodlist/search/', views.food_search, name='food_search'),
+    path('api/categorylist/search/', views.category_search, name='category_search'),
+    path('api/userlist/search/', views.user_search, name='user_search'),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

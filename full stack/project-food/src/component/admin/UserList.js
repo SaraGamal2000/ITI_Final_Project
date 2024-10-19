@@ -76,7 +76,7 @@ const UserList = () => {
             <hr />
 
             {/* Add New User Button */}
-            <Link to="/add-user">
+            <Link to="/admin/add-user">
                 <button
                     style={{
                         padding: "10px 20px",
