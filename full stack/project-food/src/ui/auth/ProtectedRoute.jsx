@@ -15,6 +15,7 @@ import apiInstance from "../../utils/axios";
 
 // ui components
 import Loader from "../loader/Loader";
+import { App_Admin } from "../../utils/constants";
 
 // Define the 'PrivateRoute' component as a functional component that takes 'children' as a prop.
 const ProtectedRoute = ({ children }) => {
@@ -49,15 +50,15 @@ const ProtectedRoute = ({ children }) => {
 
     const activeA = localStorage.getItem("active");
     if (activeA === "null") {
-        console.log(`333`);
+        // console.log(`333`);
         return <Navigate to={`/confirmemail`} />;
     }
 
     if (profileData?.user?.is_superuser === false) {
         return <>{children}</>;
     } else {
-        return <>{children}</>;
-        // return <Navigate to={`/`} />;
+        // return <>{children}</>;
+        return <Navigate to={`/${App_Admin}/profile`} />;
     }
 
     // return <>{children}</>;

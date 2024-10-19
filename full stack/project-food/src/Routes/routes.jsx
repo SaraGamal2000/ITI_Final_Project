@@ -12,7 +12,7 @@ import Nav from "../component/navbar/nav";
 import Home_p from "../pages/home";
 import Footer from "../component/footer/footer";
 import Loader from "../ui/loader/Loader";
-import { App_User } from "../utils/constants";
+import { App_Admin, App_Company, App_User } from "../utils/constants";
 import AppUserLayout from "../pages/user/AppUserLayout";
 import ProtectedRoute from "../ui/auth/ProtectedRoute";
 import AppUser from "../pages/user/AppUser";
@@ -24,6 +24,16 @@ import HomepageLayout from "../components/layouts/Homepagelayout";
 import ConfirmEmail from "../ui/confirmemail/ConfirmEmail";
 import ChangePassword from "../ui/changepassword/ChangePassword";
 import Logout from "../ui/logout/Logout";
+import ProtectedRouteCompany from "../ui/auth/ProtectedRouteCompany";
+import AppAdminLayout from "../pages/admin/AppAdminLayout";
+import AppAdmin from "../pages/admin/AppAdmin";
+import CategoryList from "../component/admin/CategoryList";
+import FoodList from "../component/admin/FoodList";
+import AddFood from "../component/admin/Forms/AddFood";
+import UserList from "../component/admin/UserList";
+import AddCategory from "../component/admin/Forms/AddCategory";
+import AddUser from "../component/admin/Forms/AddUser";
+import SearchResults from "../component/admin/SearchResults";
 
 // const Homepage = lazy(() => import("../pages/home/homepage"));
 // const Loginpage = lazy(() => import("./../pages/loginpage"));
@@ -56,6 +66,114 @@ export default function AppRoute() {
             <Suspense fallback={<Loader />}>
                 <BrowserRouter>
                     <Routes>
+                        {/* company */}
+                        <Route
+                            path={`${App_Admin}`}
+                            element={
+                                <ProtectedRouteCompany>
+                                    <AppAdminLayout />
+                                </ProtectedRouteCompany>
+                            }
+                        >
+                            <Route
+                                index
+                                element={
+                                    <Navigate
+                                        replace
+                                        to={`${App_Admin}/profile`}
+                                    />
+                                }
+                            />
+                            <Route
+                                exact
+                                path={`${App_Admin}`}
+                                component={Router}
+                            />
+                            <Route
+                                path={`/${App_Admin}`}
+                                element={<AppAdmin />}
+                            />
+                            <Route
+                                path={`/${App_Admin}/profile`}
+                                element={<AppAdmin />}
+                            />
+                            <Route
+                                path={`/${App_Admin}/${App_Admin}/profile`}
+                                element={<AppAdmin />}
+                            />
+                            <Route
+                                path={`/${App_Admin}profile`}
+                                element={<AppAdmin />}
+                            />
+                            <Route
+                                path={`/${App_Admin}-profile`}
+                                element={<AppAdmin />}
+                            />
+                            <Route
+                                path={`/${App_Admin}/${App_Admin}profile`}
+                                element={<AppAdmin />}
+                            />
+                            <Route
+                                path={`/${App_Admin}/${App_Admin}-profile`}
+                                element={<AppAdmin />}
+                            />
+                            <Route
+                                path={`/${App_Admin}/profile${App_Admin}`}
+                                element={<AppAdmin />}
+                            />
+                            <Route
+                                path={`/${App_Admin}/profile-${App_Admin}`}
+                                element={<AppAdmin />}
+                            />
+
+                            {/* ==========================admin======================= */}
+                            {/* ==========================admin======================= */}
+
+                            {/* 
+                            <Route
+                                path={`/${App_Admin}/category-list`}
+                                element={<CategoryList />}
+                            />
+                            <Route
+                                path={`/${App_Admin}/food-list`}
+                                element={<FoodList />}
+                            />
+                            <Route
+                                path={`/${App_Admin}/add-food`}
+                                element={<AddFood />}
+                            />
+                            <Route
+                                path={`/${App_Admin}/users-list`}
+                                element={<UserList />}
+                            />
+                            <Route
+                                path={`/${App_Admin}/add-category`}
+                                element={<AddCategory />}
+                            />
+                            <Route
+                                path={`/${App_Admin}/add-user`}
+                                element={<AddUser />}
+                            />
+                            <Route
+                                path={`/${App_Admin}/search`}
+                                element={<SearchResults />}
+                            />
+                            <Route
+                                path={`/${App_Admin}/edit-food/:id`}
+                                element={<AddFood />}
+                            />
+                            <Route
+                                path={`/${App_Admin}/edit-category/:id`}
+                                element={<AddCategory />}
+                            />
+                            <Route
+                                path={`/${App_Admin}/edit-user/:id`}
+                                element={<AddUser />}
+                            />
+ */}
+                            {/*  */}
+                        </Route>
+
                         {/* user */}
                         <Route
                             path={`/${App_User}`}
@@ -211,8 +329,15 @@ export default function AppRoute() {
                             <Route path="/vendors" element={<Vendorspage />} />
                             <Route path="/cart" element={<Cartpage />} />
                             <Route path="/aboutus" element={<About_us />} />
-                         {/* <Route path="/detailsproject/:slug/" element={<ProductDetail />}/> */}
+                            {/* -----------------------------------------
+                            -------------------------------------------
+                            ---------------------------------------- */}
+                            {/* <Route path="/detailsproject/:slug/" element={<ProductDetail />}/> */}
                             <Route path="/detail/:id" element={<ProductDetail />} />
+                            {/* -------------------------------------------
+                            --------------------------------------------
+                            --------------------------- */}
+
                             <Route path="/profile" element={<Profile />} />
                             <Route path="/order" element={<Order />} />
 

@@ -1,0 +1,65 @@
+
+
+/* Common styles */
+.search-results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Cards container */
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+/* Default light mode styles */
+.result-card {
+    background-color: #fff3e0; /* Light mode background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    max-width: 30%;
+    min-width: 300px;
+    color: #333; /* Text color */
+}
+
+/* Dark mode styles */
+.search-results-container.dark {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.result-card.dark {
+    background-color: #333; /* Dark mode background */
+    color: #e0e0e0; /* Dark mode text color */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Styling individual items in each card */
+.card-item {
+    margin-bottom: 15px;
+}
+
+/* Responsive design to stack cards vertically on smaller screens */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .result-card {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+

@@ -1,101 +1,94 @@
-const cart = [];
-const CartQuantity = (state = cart, action) => {
 
-    // if (!action.payload || !Array.isArray(action.payload) || action.payload.length === 0) {
-    //     console.error("Invalid payload:", action.payload);
-    //     return state; 
-    // }
-    if (!action.payload || typeof action.payload !== 'object') {
-        console.error("Invalid payload:", action.payload);
-        return state; 
-    }
+import axios from 'axios';
 
-    const product = action.payload[0];
-
-    // const product = action.payload.product_id
+// export const CartQuantity = () => {};
+export const addToCart = (product,productId, quantity) => {
+    console.log('Adding to cart:', product);
     
-    console.log('Previous State:', state);
-    console.log('Action Received:', action);
+    return async (dispatch) => {
+        
+        try {
+                        const cartItem = {
+                            cart_id: 1,
+                            product_id: product.id, 
+                            quantity: 0,         
+                            price: parseFloat(product.price), 
+                        };
+                       
+                        const response = await axios.post('http://127.0.0.1:8000/api/cart-items/', cartItem); 
+                        console.log('Response from API:', response.data);
 
-    switch (action.type) {
-        case "ADD_ITEM":
-            const exist = state.find((x) => x.product_id === product.product_id);
-            // const exist = state.find((x) => x.product_id === action.payload.product_id);
-            if (exist) {  
-                console.log('payload of add item exist', action.payload);
-                return state.map((x) =>
-
-                    x.product_id === product.product_id ? { ...x, quantity: x.quantity + 1
-                        // (product.quantity || 1) 
-
-                    } : x
-                    // x.product_id === action.payload.product_id ? { ...x, quantity: x.quantity + (action.payload.quantity || 1) } : x
-
-                );
-            } else {
-                console.log('reducer product:', action.payload.product_id);
-                console.log('payload of add item not exist', action.payload);
-
-
-                return [...state, { ...product, quantity: 1}];
-                // return [...state, { ...action.payload.product_id, quantity: action.payload.quantity || 1}];
-            }
-
-        case "REMOVE_ITEM":
-
-
-            console.log('payload of remove', action.payload);   
-            // return state.filter((x) => x.id !== action.payload);
-            return state.filter((x) => x.product_id !== action.payload);
-            
-
-            case "INCREMENT_ITEM":
-                console.log("Reducer received action:", action);
-                console.log('payload of increment', action.payload);
-                return state.map((x) =>
-                    x.product_id === action.payload.product_id 
-                        ? { ...x, quantity: x.quantity+1 } : x
-                );
-
-        // case "INCREMENT_ITEM":
-        //     console.log("Reducer received action:", action);
-        //     return state.map((x) =>
-        //         // x.id === product.id ? { ...x, quantity: x.quantity + 1 } : x
-        //     x.prouduct_id === action.payload.product_id ? { ...x, quantity: x.quantity + action.payload.quantity  } : x
-        //     );
-
-
-
-
-        // case "DECREMENT_ITEM":
-        //     console.log("Reducer received action:", action);
-        //     return state.map((x) => {
-        //         if (x.product_id === action.payload.product_id) {
-        //             const newQuantity = x.quantity - 1; 
-        //             return newQuantity > 0 
-        //                 ? { ...x, quantity: newQuantity } 
-        //                 : null; 
-        //         }
-        //         return x;
-        //     }).filter((x) => x !== null);
-
-        case "DECREMENT_ITEM":
-            console.log("Reducer received action:", action);
-            if (action.payload.quantity  === 1) {
-                console.log('payload of decrement', action.payload);
-                // return state.filter((x) => x.id !== product.id);
-                return state.filter((x) => x.product_id !== action.payload.product_id);
-            } else {
-                console.log('payload of decrement - else', action.payload);
-                return state.map((x) =>
-                    // x.id === product.id ? { ...x, quantity: x.quantity - 1 } : x
-                x.product_id === action.payload.product_id  ? { ...x, quantity: x.quantity - 1  } : x
-                );
-            }
-
-        default:
-            return state;
-    }
+                        // if (Array.isArray(response.data) && response.data.length > 0) 
+                        if (response.data && typeof response.data === 'object')
+                            {
+                         
+                            dispatch({
+                                type: "ADD_ITEM",
+                                payload:response.data, 
+                                
+                            });
+                            
+                        } else {
+                            console.error('Invalid response format:', response.data); 
+                            dispatch({
+                                type: "ADD_ITEM",
+                                payload: [], 
+                            });
+                        }
+                   
+        } catch (error) {
+            console.error("Error adding to cart:", error);
+        }
+    };
 };
 
-export default CartQuantity;
+
+export const removeFromCart = (product_id) => {
+    return async (dispatch) => {
+        try {
+          
+            await axios.delete(`http://127.0.0.1:8000/api/cart-items/${product_id}/`);
+            
+            dispatch({
+                type: "REMOVE_ITEM",
+                payload:product_id, 
+            });
+        } catch (error) {
+            console.error("Error removing from cart:", error);
+        }
+    };
+};
+
+
+export const updateCartItemQuantity = (product_id, action) => {
+    return async (dispatch) => {
+        try {
+            console.log("Updating cart item with ID:", product_id);
+            console.log("Action Payload:", action.payload);
+
+            const response = await axios.put(`http://127.0.0.1:8000/api/cart-items/${product_id}/`, {
+                action: action, 
+            });
+
+
+            console.log("API Response:", response.data);
+
+            const payload = {
+                product_id: response.data.product_id,
+                quantity: response.data.quantity,
+            };
+
+            console.log("Payload of put:", payload);
+
+
+            dispatch({
+                // type: action === 'increment' ? "INCREMENT_ITEM" : "DECREMENT_ITEM",
+                type: action === 'increment' ? "INCREMENT_ITEM" : "DECREMENT_ITEM",
+                payload ,
+              
+            });
+        } catch (error) {
+            console.error("Error updating cart item quantity:", error);
+        }
+    };
+};

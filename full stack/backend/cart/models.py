@@ -26,7 +26,9 @@ class Cart(models.Model):
 class CartItem(models.Model):
     id = models.AutoField(primary_key=True)
     cart_id = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name="items")
-    product_id = models.ForeignKey(Product, on_delete=models.CASCADE)
+    # product_id = models.ForeignKey(Product, on_delete=models.CASCADE)
+    product_id = models.ForeignKey(api_models.ProductApi, on_delete=models.CASCADE)
+
     quantity = models.PositiveIntegerField(default=0)
     price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
 
@@ -34,7 +36,8 @@ class CartItem(models.Model):
 class Order(models.Model):
 
     id = models.AutoField(primary_key=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    # user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(api_models.User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     total_price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
     shipping_address = models.CharField(max_length=255)
@@ -46,9 +49,10 @@ class Order(models.Model):
 class OrderItem(models.Model):
     id = models.AutoField(primary_key=True)
     order_id = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
-    product_id = models.ForeignKey(Product, on_delete=models.CASCADE)
+    # product_id = models.ForeignKey(Product, on_delete=models.CASCADE)
+    product_id = models.ForeignKey(api_models.ProductApi, on_delete=models.CASCADE)
+
     quantity = models.PositiveIntegerField(default=0)
     price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
-
 
 

@@ -92,4 +92,3 @@ export const updateCartItemQuantity = (product_id, action) => {
         }
     };
 };
-

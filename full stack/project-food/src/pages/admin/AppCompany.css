@@ -1,0 +1,98 @@
+.companyprofile {
+}
+
+.companyprofile .container {
+    margin-block: 40px;
+    margin-bottom: 100px;
+}
+
+.companyprofile .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column-reverse;
+    gap: 50px;
+    margin-block: 50px;
+
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.companyprofile .content .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.companyprofile .content .details {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.companyprofile .content .details span {
+    font-weight: normal;
+    display: inline;
+    margin-left: 10px;
+}
+
+.companyprofile .content .buttons {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+}
+
+.companyprofile .content .image img {
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.companyprofile .categories {
+    width: 100%;
+    margin-block: 50px;
+
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.companyprofile .categories .actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+@media (max-width: 767px) {
+    .companyprofile .categories .actions {
+        flex-direction: column;
+    }
+}
+
+.companyprofile .categories .actions button {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.companyprofile .categories .actions ion-icon {
+    background: var(--cultured-2);
+    color: var(--cadet);
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    border-radius: 50%;
+}

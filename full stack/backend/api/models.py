@@ -8,7 +8,7 @@ from django.core.validators import RegexValidator
 from shortuuid.django_fields import ShortUUIDField
 import shortuuid
 
-
+#
 from django.conf import settings
 
 
@@ -145,3 +145,4 @@ class ProductApi(models.Model):
         if self.slug == "" or self.slug == None:
             self.slug = slugify(self.title) + "-" + shortuuid.uuid()[:2]
         super(ProductApi, self).save(*args, **kwargs)
+

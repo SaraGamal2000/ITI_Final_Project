@@ -69,7 +69,21 @@ python3 manage.py migrate
 ```
 python3 manage.py runserver
 ```
+
+`Step 6` : Info Admin.
+
+```
 python3 manage.py createsuperuser
+```
+
+```
 sosannaemad3@gmail.com
+```
+
+```
 sosanna
-123
+```
+
+```
+123@@Sos
+```

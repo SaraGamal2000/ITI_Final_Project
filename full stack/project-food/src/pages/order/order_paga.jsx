@@ -57,9 +57,10 @@ const CreateOrder = () => {
 
         setOrderDetails(res_item.data);
         setSuccessMessage(
-          "Your order has been placed successfully and will arrive within 48 hours!"
+          "Your order has been placed successfully and will arrive within 48 hours!")
         
-      } else {
+      }
+      else {
         setError("Order ID not found");
       }
     } catch (error) {
@@ -178,5 +179,4 @@ const CreateOrder = () => {
 };
 
 export default CreateOrder;
-
 
