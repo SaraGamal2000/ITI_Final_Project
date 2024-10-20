@@ -43,6 +43,7 @@ schema_view = get_schema_view(
     permission_classes=(permissions.AllowAny,),
 )
 
+#  http://127.0.0.1:8000/api/cart-items/
 urlpatterns = [
     path("", schema_view.with_ui("swagger", cache_timeout=0), name="schema-swagger-ui"),
     path("admin/", admin.site.urls),
@@ -51,12 +52,10 @@ urlpatterns = [
     # path("api/", include("account.urls")),
     path("api/token/", TokenObtainPairView.as_view()),
     path("api/v1/", include("api.urls")),
-    path('admin/', admin.site.urls),
-    path('api/', include('api.urls')),
-    path('api/foodlist/search/', views.food_search, name='food_search'),
-    path('api/categorylist/search/', views.category_search, name='category_search'),
-    path('api/userlist/search/', views.user_search, name='user_search'),
-
+    path("api/", include("api.urls")),
+    path("api/foodlist/search/", views.food_search, name="food_search"),
+    path("api/categorylist/search/", views.category_search, name="category_search"),
+    path("api/userlist/search/", views.user_search, name="user_search"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

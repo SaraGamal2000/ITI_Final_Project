@@ -9,9 +9,9 @@ from django.urls import path
 
 
 router = DefaultRouter()
-router.register(r'foods', FoodViewSet)
-router.register(r'categories', CategoryViewSet)
-router.register(r'users', UserProfileViewSet)
+router.register(r"foods", FoodViewSet)
+router.register(r"categories", CategoryViewSet)
+router.register(r"users", UserProfileViewSet)
 
 urlpatterns = router.urls
 

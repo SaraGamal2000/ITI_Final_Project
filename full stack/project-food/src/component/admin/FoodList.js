@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom"; // Import Link and useNavigate
 import api from "../../utils/api"; // Axios instance
 import Swal from "sweetalert2";
+import { App_Admin } from "../../utils/constants";
+import useUserData from "../../plugin/useUserData";
+import apiInstance from "../../utils/axios";
+import Loader from "../../ui/loader/Loader";
+import Cookies from "js-cookie"; // Import the 'js-cookie' library for managing cookies
 
 const FoodList = () => {
     const [foods, setFoods] = useState([]);
@@ -12,7 +17,7 @@ const FoodList = () => {
     }, []);
 
     const fetchFoods = () => {
-        api.get('/productapi/lists/')
+        api.get("/productapi/lists/")
             .then((res) => setFoods(res.data))
             .catch((err) => console.error(err));
     };
@@ -69,6 +74,51 @@ const FoodList = () => {
         // Navigate to edit page with the food ID
         navigate(`/edit-food/${id}`);
     };
+    // =================================================================
+
+    // =================================================================
+    // const navigate = useNavigate();
+    const [posts, setPosts] = useState([]);
+    const [popularPosts, setPopularPosts] = useState([]);
+    const [category, setCategory] = useState([]);
+    const userId = useUserData()?.user_id;
+    const accessToken = Cookies.get("access_token");
+
+    const fetchPosts = async () => {
+        try {
+            const response = await apiInstance.get(
+                `productapi/admin/lists/`
+                //     , {
+                //     headers: {
+                //         Authorization: `Bearer ${accessToken}`,
+                //     },
+                // }
+            );
+            setPosts(response.data);
+            // console.log(`response.data>-`, response.data);
+        } catch (error) {
+            console.log(`${error}`);
+        }
+    };
+
+    useEffect(() => {
+        fetchPosts();
+    }, []);
+
+    // Pagination
+    const itemsPerPage = 4;
+    const [currentPage, setCurrentPage] = useState(1);
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const postItems = posts.slice(indexOfFirstItem, indexOfLastItem);
+    const totalPages = Math.ceil(posts.length / itemsPerPage);
+    const pageNumbers = Array.from(
+        { length: totalPages },
+        (_, index) => index + 1
+    );
+
+    if (!posts) return <Loader />;
+    console.log(posts);
 
     return (
         <div>
@@ -76,7 +126,7 @@ const FoodList = () => {
             <hr />
 
             {/* Add New Food Button */}
-            <Link to="/admin/add-food">
+            <Link to={`/${App_Admin}/createregisterorder`}>
                 <button
                     style={{
                         padding: "10px 15px",
@@ -130,7 +180,7 @@ const FoodList = () => {
                                 fontSize: "22px",
                             }}
                         >
-                            Type
+                            Full Name
                         </th>
                         <th
                             style={{
@@ -140,11 +190,89 @@ const FoodList = () => {
                                 fontSize: "22px",
                             }}
                         >
-                            Actions
+                            Phone
                         </th>
                     </tr>
                 </thead>
                 <tbody>
+                    {posts.map((food) => (
+                        <tr key={food.id}>
+                            <td
+                                style={{
+                                    borderBottom: "1px solid #ddd",
+                                    padding: "6px",
+                                    fontWeight: "bold",
+                                }}
+                            >
+                                {food?.title}
+                            </td>
+                            <td
+                                style={{
+                                    borderBottom: "1px solid #ddd",
+                                    padding: "6px",
+                                    fontWeight: "bold",
+                                }}
+                            >
+                                {food?.price_per_unit}
+                            </td>
+                            <td
+                                style={{
+                                    borderBottom: "1px solid #ddd",
+                                    padding: "6px",
+                                    fontWeight: "bold",
+                                }}
+                            >
+                                {food?.full_name}
+                            </td>
+                            <td
+                                style={{
+                                    borderBottom: "1px solid #ddd",
+                                    padding: "6px",
+                                    fontWeight: "bold",
+                                }}
+                            >
+                                {food?.phone}
+                            </td>
+                            {/* <td
+                                style={{
+                                    borderBottom: "1px solid #ddd",
+                                    padding: "6px",
+                                    textAlign: "center",
+                                }}
+                            >
+                                <button
+                                    onClick={() => handleEdit(food.id)} // Navigate to edit page
+                                    style={{
+                                        marginRight: "8px",
+                                        padding: "5px 8px",
+                                        cursor: "pointer",
+                                        fontWeight: "bold",
+                                        backgroundColor: "green",
+                                        color: "white",
+                                        border: "none",
+                                        borderRadius: "20px",
+                                    }}
+                                >
+                                    Edit
+                                </button>
+                                <button
+                                    onClick={() => handleDelete(food.id)}
+                                    style={{
+                                        padding: "5px 8px",
+                                        cursor: "pointer",
+                                        fontWeight: "bold",
+                                        backgroundColor: "red",
+                                        color: "white",
+                                        border: "none",
+                                        borderRadius: "20px",
+                                    }}
+                                >
+                                    Delete
+                                </button>
+                            </td> */}
+                        </tr>
+                    ))}
+                    {/*  
                     {foods.map((food) => (
                         <tr key={food.id}>
                             <td
@@ -212,7 +340,7 @@ const FoodList = () => {
                                 </button>
                             </td>
                         </tr>
-                    ))}
+                    ))}*/}
                 </tbody>
             </table>
         </div>

@@ -9,6 +9,7 @@ from api import views as api_views
 from rest_framework import serializers
 from .models import Food, Category, UserProfile
 
+
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 
     @classmethod
@@ -102,19 +103,22 @@ class ProductSerializer(serializers.ModelSerializer):
             self.Meta.depth = 3
 
 
+# =============================================================
 
 
 class FoodSerializer(serializers.ModelSerializer):
     class Meta:
         model = Food
-        fields = '__all__'
+        fields = "__all__"
+
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = '__all__'
+        fields = "__all__"
+
 
 class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserProfile
-        fields = '__all__'
+        fields = "__all__"

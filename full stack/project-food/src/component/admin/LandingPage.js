@@ -14,6 +14,11 @@ import CategoryIcon from "@mui/icons-material/Category";
 import UserIcon from "@mui/icons-material/People";
 import CookIcon from "@mui/icons-material/EmojiFoodBeverage";
 import api from "../../utils/api";
+import Loader from "../../ui/loader/Loader";
+import apiInstance from "../../utils/axios";
+import { useNavigate } from "react-router-dom";
+import useUserData from "../../plugin/useUserData";
+import Cookies from "js-cookie"; // Import the 'js-cookie' library for managing cookies
 
 const LandingPage = () => {
     const [foodCount, setFoodCount] = useState(0);
@@ -22,23 +27,68 @@ const LandingPage = () => {
 
     const theme = useTheme();
 
-    const fetchCounts = () => {
-        api.get("foods/")
-            .then((res) => setFoodCount(res.data.length))
-            .catch((err) => console.error(err));
+    // const fetchCounts = () => {
+    //     api.get("foods/")
+    //         .then((res) => setFoodCount(res.data.length))
+    //         .catch((err) => console.error(err));
 
-        api.get("categories/")
-            .then((res) => setCategoryCount(res.data.length))
-            .catch((err) => console.error(err));
+    //     api.get("categories/")
+    //         .then((res) => setCategoryCount(res.data.length))
+    //         .catch((err) => console.error(err));
 
-        api.get("users/")
-            .then((res) => setUserCount(res.data.length))
-            .catch((err) => console.error(err));
+    //     api.get("users/")
+    //         .then((res) => setUserCount(res.data.length))
+    //         .catch((err) => console.error(err));
+    // };
+
+    // useEffect(() => {
+    //     fetchCounts();
+    // }, []);
+    // =================================================================
+
+    // =================================================================
+    const navigate = useNavigate();
+    const [posts, setPosts] = useState([]);
+    const [popularPosts, setPopularPosts] = useState([]);
+    const [category, setCategory] = useState([]);
+    const userId = useUserData()?.user_id;
+    const accessToken = Cookies.get("access_token");
+
+    const fetchPosts = async () => {
+        try {
+            const response = await apiInstance.get(
+                `productapi/admin/lists/`
+                //     , {
+                //     headers: {
+                //         Authorization: `Bearer ${accessToken}`,
+                //     },
+                // }
+            );
+            setPosts(response.data);
+            // console.log(`response.data>-`, response.data);
+        } catch (error) {
+            console.log(`${error}`);
+        }
     };
 
     useEffect(() => {
-        fetchCounts();
+        fetchPosts();
     }, []);
+
+    // Pagination
+    const itemsPerPage = 4;
+    const [currentPage, setCurrentPage] = useState(1);
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const postItems = posts.slice(indexOfFirstItem, indexOfLastItem);
+    const totalPages = Math.ceil(posts.length / itemsPerPage);
+    const pageNumbers = Array.from(
+        { length: totalPages },
+        (_, index) => index + 1
+    );
+
+    if (!posts) return <Loader />;
+    console.log(posts.length);
 
     return (
         <div style={{ padding: "10px" }}>
@@ -113,7 +163,8 @@ const LandingPage = () => {
                                 }}
                             />
                             <Typography variant="h4" sx={{ marginTop: "10px" }}>
-                                {foodCount}
+                                {/* {foodCount} */}
+                                {posts?.length}
                             </Typography>
                             <LinearProgress
                                 variant="determinate"

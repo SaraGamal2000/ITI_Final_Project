@@ -47,56 +47,36 @@
 //
 //export default App;
 
-
 import "./App.css";
 import AppRoute from "./Routes/routes";
 import MainWrapper from "./components/layouts/MainWrapper";
-import {  styled } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 // import "./style.css";
+import cart from "../src/context/cart";
+import { useState } from "react";
 
 function App() {
-const DrawerHeader = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "flex-end",
-  padding: theme.spacing(0, 1),
-  ...theme.mixins.toolbar,
-}));
+    const DrawerHeader = styled("div")(({ theme }) => ({
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "flex-end",
+        padding: theme.spacing(0, 1),
+        ...theme.mixins.toolbar,
+    }));
+    const [carts, setCarts] = useState(0);
+
     return (
         <>
-            <MainWrapper>
-                <AppRoute />
-            </MainWrapper>
+            <cart.Provider value={{ carts, setCarts }}>
+                <MainWrapper>
+                    <AppRoute />
+                </MainWrapper>
+            </cart.Provider>
         </>
     );
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //import React, { useState, useMemo } from "react";
 //import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
@@ -144,15 +124,6 @@ export default App;
 //  );
 //}
 //
-
-
-
-
-
-
-
-
-
 
 // import logo from "./logo.svg";
 //import React, { useState, useMemo } from "react";
@@ -265,25 +236,6 @@ export default App;
 //  );
 //}
 //
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //// import logo from "./logo.svg";
 //import "./App.css";

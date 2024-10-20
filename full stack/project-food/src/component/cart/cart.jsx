@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Card from "react-bootstrap/Card";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -6,11 +6,13 @@ import formatCurrency from "../formatcurrency";
 import { useSelector } from "react-redux";
 // import {CartQuantity}
 import { CartQuantity } from "../../Redux/Action";
+import cart from "../../context/cart";
 
 function CartIconComponent({ Quantity, id }) {
     // const quantity = useSelector((state) => state.quantity);
     // const quantity=useSelector((state)=>state.CartQuantity);
     // const update_quantity=useDispatch();
+    const { carts, setCarts } = useContext(cart);
 
     const cartItems = useSelector((state) => state.CartQuantity || []); // Getting cart items from the Redux store
     // const totalQuantity = cartItems.reduce((total, item) => total + item.qty, 0);
@@ -24,7 +26,8 @@ function CartIconComponent({ Quantity, id }) {
     return (
         <div>
             <span className="badge badge-warning text-dark bg-warning rounded-5 fs-7">
-                {totalQuantity}
+                {/* {totalQuantity} */}
+                {carts}
             </span>
         </div>
     );

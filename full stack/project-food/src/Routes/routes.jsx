@@ -1,10 +1,5 @@
 import { lazy, Suspense } from "react";
-import {
-    BrowserRouter,
-    Routes,
-    Route,
-    Navigate,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import ProtectedRoute from "../ui/auth/ProtectedRoute";
 import ProtectedRouteCompany from "../ui/auth/ProtectedRouteCompany";
@@ -42,11 +37,17 @@ const Register = lazy(() => import("../pages/signup"));
 const Cartpage = lazy(() => import("../pages/cart"));
 const About_us = lazy(() => import("../pages/about_us"));
 const Profile = lazy(() => import("../pages/profile/profile"));
-const ForgotPassword = lazy(() => import("../pages/forgotpassword/forgotpassword"));
-const ResetPassword = lazy(() => import("../pages/resetpassword/resetpassword"));
+const ForgotPassword = lazy(() =>
+    import("../pages/forgotpassword/forgotpassword")
+);
+const ResetPassword = lazy(() =>
+    import("../pages/resetpassword/resetpassword")
+);
 const Order = lazy(() => import("../pages/order/order_paga"));
 const ConfirmEmail = lazy(() => import("../ui/confirmemail/ConfirmEmail"));
-const ChangePassword = lazy(() => import("../ui/changepassword/ChangePassword"));
+const ChangePassword = lazy(() =>
+    import("../ui/changepassword/ChangePassword")
+);
 const Logout = lazy(() => import("../ui/logout/Logout"));
 
 export default function AppRoute() {
@@ -54,6 +55,87 @@ export default function AppRoute() {
         <Suspense fallback={<Loader />}>
             <BrowserRouter>
                 <Routes>
+                    {/* ========== Admin Dashboard Routes ========== */}
+                    <Route
+                        path={`${App_Admin}`}
+                        element={
+                            <ProtectedRouteCompany>
+                                <AppAdminLayout />
+                            </ProtectedRouteCompany>
+                        }
+                    >
+                        {/* Admin Dashboard Routes */}
+                        <Route
+                            index
+                            element={
+                                <Navigate replace to={`${App_Admin}/profile`} />
+                            }
+                        />
+                        <Route path="profile" element={<AppAdmin />} />
+                        <Route path="landing-page" element={<LandingPage />} />
+                        <Route
+                            path="category-list"
+                            element={<CategoryList />}
+                        />
+                        <Route path="food-list" element={<FoodList />} />
+                        <Route path="add-food" element={<AddFood />} />
+                        <Route path="users-list" element={<UserList />} />
+                        <Route path="add-category" element={<AddCategory />} />
+                        <Route path="add-user" element={<AddUser />} />
+                        <Route path="search" element={<SearchResults />} />
+                        <Route path="edit-food/:id" element={<AddFood />} />
+                        <Route
+                            path="edit-category/:id"
+                            element={<AddCategory />}
+                        />
+                        <Route path="edit-user/:id" element={<AddUser />} />
+                        {/*  */}
+                        <Route
+                            path="createregisterorder"
+                            element={<CreateRegisterOrder />}
+                        />
+                    </Route>
+
+                    {/* ========== User Dashboard Routes ========== */}
+                    <Route
+                        path={`${App_User}`}
+                        element={
+                            <ProtectedRoute>
+                                <AppUserLayout />
+                            </ProtectedRoute>
+                        }
+                    >
+                        {/* User Dashboard Routes */}
+                        <Route
+                            index
+                            element={
+                                <Navigate replace to={`${App_User}/profile`} />
+                            }
+                        />
+                        <Route path="profile" element={<AppUser />} />
+                        <Route
+                            path="updateprofile/:id"
+                            element={<UpdateProfile />}
+                        />
+                        <Route
+                            path="createregisterorder"
+                            element={<CreateRegisterOrder />}
+                        />
+                        <Route path="listorders" element={<ListOrders />} />
+                        <Route
+                            path="detailsorder/:slug"
+                            element={<ProductDetail />}
+                        />
+                        <Route
+                            path={`/${App_User}/detailsorder/:slug"`}
+                            element={<ProductDetail />}
+                        />
+                        {/*  */}
+                        <Route
+                            path={`/${App_User}/cart/:slug`}
+                            element={<Cartpage />}
+                        />
+                    </Route>
 
                     {/* ========== Main Public Routes ========== */}
                     <Route path="/" element={<HomepageLayout />}>
@@ -68,79 +150,26 @@ export default function AppRoute() {
                         {/* Authentication Pages */}
                         <Route path="login" element={<Loginpage />} />
                         <Route path="register" element={<Register />} />
-                        <Route path="forgot-password" element={<ForgotPassword />} />
-                        <Route path="reset-password/:token" element={<ResetPassword />} />
+                        <Route
+                            path="forgot-password"
+                            element={<ForgotPassword />}
+                        />
+                        <Route
+                            path="reset-password/:token"
+                            element={<ResetPassword />}
+                        />
                         <Route path="confirmemail" element={<ConfirmEmail />} />
-                        <Route path="changepassword" element={<ChangePassword />} />
+                        <Route
+                            path="changepassword"
+                            element={<ChangePassword />}
+                        />
                         <Route path="logout" element={<Logout />} />
-                    </Route>
-
-                    {/* ========== Admin Dashboard Routes ========== */}
-                    <Route
-                        path={`${App_Admin}`}
-                        element={
-                            <ProtectedRouteCompany>
-                                <AppAdminLayout />
-                            </ProtectedRouteCompany>
-                        }
-                    >
-                        {/* Admin Dashboard Routes */}
-                        <Route index element={<Navigate replace to={`${App_Admin}/profile`} />} />
-                        <Route path="profile" element={<AppAdmin />} />
-                        <Route path="landing-page" element={<LandingPage />} />
-                        <Route path="category-list" element={<CategoryList />} />
-                        <Route path="food-list" element={<FoodList />} />
-                        <Route path="add-food" element={<AddFood />} />
-                        <Route path="users-list" element={<UserList />} />
-                        <Route path="add-category" element={<AddCategory />} />
-                        <Route path="add-user" element={<AddUser />} />
-                        <Route path="search" element={<SearchResults />} />
-                        <Route path="edit-food/:id" element={<AddFood />} />
-                        <Route path="edit-category/:id" element={<AddCategory />} />
-                        <Route path="edit-user/:id" element={<AddUser />} />
-                    </Route>
-
-                    {/* ========== User Dashboard Routes ========== */}
-                    <Route
-                        path={`${App_User}`}
-                        element={
-                            <ProtectedRoute>
-                                <AppUserLayout />
-                            </ProtectedRoute>
-                        }
-                    >
-                        {/* User Dashboard Routes */}
-                        <Route index element={<Navigate replace to={`${App_User}/profile`} />} />
-                        <Route path="profile" element={<AppUser />} />
-                        <Route path="updateprofile/:id" element={<UpdateProfile />} />
-                        <Route path="createregisterorder" element={<CreateRegisterOrder />} />
-                        <Route path="listorders" element={<ListOrders />} />
-                        <Route path="detailsorder/:slug" element={<ProductDetail />} />
                     </Route>
                 </Routes>
             </BrowserRouter>
         </Suspense>
     );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import { lazy, Suspense } from "react";
 // import {

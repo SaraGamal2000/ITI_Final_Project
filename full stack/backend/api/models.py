@@ -147,6 +147,7 @@ class ProductApi(models.Model):
         super(ProductApi, self).save(*args, **kwargs)
 
 
+# =============================================================
 # Food Model
 class Food(models.Model):
     name = models.CharField(max_length=100)

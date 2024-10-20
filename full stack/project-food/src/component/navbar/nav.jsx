@@ -20,9 +20,12 @@ import { useDispatch, useSelector } from "react-redux";
 // import {CartQuantity}
 import { CartQuantity } from "../../Redux/Action";
 import { useAuthStore } from "../../store/auth.js";
+import cart from "../../context/cart.js";
 
 // bg-body-tertiary
 function Nav() {
+    const { carts, setCarts } = useContext(cart);
+
     const quantity = useSelector((state) => state.CartQuantity);
     const update_quantity = useDispatch();
 

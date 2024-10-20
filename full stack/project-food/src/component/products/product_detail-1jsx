@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import Product_component from "../vendors/vendor";
 import { Row, Button } from "react-bootstrap";
 import formatCurrency from "../formatcurrency";
@@ -9,9 +9,6 @@ import {
     removeFromCart,
     updateCartItemQuantity,
 } from "../../Redux/Action";
-import { useNavigate } from "react-router-dom";
-import { App_User } from "../../utils/constants";
-import cart from "../../context/cart";
 
 // export default function ProductDetailComponent({
 //     id,
@@ -73,9 +70,6 @@ function ProductDetailComponent({ product: productapi }) {
     //   };
     // =================================================================
     // console.log(`m`, product);
-    const { carts, setCarts } = useContext(cart);
-
-    const navigate = useNavigate();
     const {
         id,
         date,
@@ -139,7 +133,7 @@ function ProductDetailComponent({ product: productapi }) {
                         </div>
                     )}
                 </div>
-                <div className="m-5 d-flex flex-column">
+                <div className="m-5">
                     <div>
                         <h2>{title}</h2>
                     </div>
@@ -159,16 +153,46 @@ function ProductDetailComponent({ product: productapi }) {
                             className="rounded-5 m-2 w-100  text-dark fs-3"
                             // onClick={inc_Quantity}
                             onClick={() => {
-                                // inc_Quantity();
-                                navigate(`/${App_User}/cart/${slug}`);
-                                setCarts(1);
+                                inc_Quantity();
                             }}
                             // onClick={onAddToCart}
                         >
                             Add to cart
                         </Button>
                         {/* ) : ( */}
-
+                        <div>
+                            <div className="d-flex align-items-center justify-content-center">
+                                <Button
+                                    variant="outline-warning"
+                                    className="rounded-circle text-dark fs-3"
+                                    // onClick={inc_Quantity}
+                                    // onClick={onAddToCart}
+                                >
+                                    +
+                                </Button>
+                                <span className="m-4 ">
+                                    <div className=" w-50 m-5  bg-white h-50 text-dark  text-center fs-3 rounded-5">
+                                        {/* {quantity}{" "} */}
+                                    </div>
+                                </span>
+                                <Button
+                                    variant="outline-warning"
+                                    className="rounded-circle m-3 text-dark fs-3 "
+                                    // onClick={dec_Quantity}
+                                    // onClick={onRemoveFromCart}
+                                >
+                                    -
+                                </Button>
+                            </div>
+                            <Button
+                                variant="outline-warning"
+                                className="rounded-5 m-2 w-100 text-dark fs-3 "
+                                // onClick={remove_Quantity}
+                                // onClick={onRemoveFromCart}
+                            >
+                                Remove
+                            </Button>
+                        </div>
                         {/* )} */}
                     </div>
                 </div>

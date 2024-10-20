@@ -71,22 +71,26 @@ export default function SideBar({ open, handleDrawerClose }) {
     const navigate = useNavigate();
 
     const pages = [
-        { text: "Home", route:`/${App_Admin}/landing-page`, icon: <HomeIcon /> },
+        {
+            text: "Home",
+            route: `/${App_Admin}/landing-page`,
+            icon: <HomeIcon />,
+        },
         {
             text: "FoodList",
             route: `/${App_Admin}/food-list`,
             icon: <MenuBookIcon />,
         },
-        {
-            text: "CategoryList",
-            route: `/${App_Admin}/category-list`,
-            icon: <CategoryIcon />,
-        },
-        {
-            text: "UsersList",
-            route: `/${App_Admin}/users-list`,
-            icon: <PeopleIcon />,
-        },
+        // {
+        //     text: "CategoryList",
+        //     route: `/${App_Admin}/category-list`,
+        //     icon: <CategoryIcon />,
+        // },
+        // {
+        //     text: "UsersList",
+        //     route: `/${App_Admin}/users-list`,
+        //     icon: <PeopleIcon />,
+        // },
     ];
 
     return (
