@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import Loader from "../ui/loader/Loader";
 import cart from "../context/cart";
 
+import PaymentPage from "./payment";
+
 function Cart_p() {
     // const cartcont = cart;
     const { id } = useParams();
@@ -108,7 +110,7 @@ function Cart_p() {
                             : "Invalid price"} */}
                     </h3>
                     <div className="w-75 m-5 ">
-                        <Button
+                        {/* <Button
                             variant="outline-warning"
                             className="rounded-5  w-100 text-dark bg-warning text-center  ml-5  fs-3 p-3"
                         >
@@ -119,7 +121,9 @@ function Cart_p() {
                             >
                                 Create order
                             </Link>
-                        </Button>
+                        </Button> */}
+                        
+                        <PaymentPage pricePerItem={product?.price_per_unit} />
                     </div>
                 </div>
             </div>

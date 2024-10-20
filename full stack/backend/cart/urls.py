@@ -1,13 +1,7 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from . import views
-from .views import (
-    cart_items,
-    create_order_from_cart,
-    order_detail,
-    update_order,
-    order_list,
-)
+from .views import *
 
 # ////////////////////////////////////////////////////
 #
@@ -19,6 +13,7 @@ urlpatterns = [
     path("orders/<int:order_id>/", views.order_detail, name="order-detail"),
     path("orders/create/", views.create_order_from_cart, name="create-order"),
     path("orders/update/<int:order_id>/", views.update_order, name="update-order"),
+    path('create-checkout-session/', views.create_checkout_session, name='create_checkout_session')
 ]
 
 

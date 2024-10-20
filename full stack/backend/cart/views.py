@@ -22,7 +22,72 @@ from api import models as api_models
 
 import logging
 
+import stripe
+import json
+from django.conf import settings
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+
+stripe.api_key = 'sk_test_51Q5PQ5RriQFy8QgNUz4iU5XImF14Aeb9wEMlib9YdwXHBKWkqz1mVpkt3wpdN4PzXhn4Dhw4VhMFlFwW8WkgbZJu00JD3BKtc3'
+
 logger = logging.getLogger(__name__)
+
+@csrf_exempt
+def create_checkout_session(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        price_per_item = data.get('price_per_item', 0)  # Get price per item
+
+        try:
+            session = stripe.checkout.Session.create(
+                payment_method_types=['card'],
+                line_items=[
+                    {
+                        'price_data': {
+                            'currency': 'usd',
+                            'product_data': {
+                                'name': 'Total Price',  # Replace with actual product name
+                            },
+                            'unit_amount': int(price_per_item * 100),  # price in cents
+                        },
+                        'quantity': 1,  # Default quantity to 1
+                    }
+                ],
+                mode='payment',
+                success_url='http://localhost:3000/success',
+                cancel_url='http://localhost:3000/cancel',
+            )
+            return JsonResponse({'id': session.id})
+        except Exception as e:
+            return JsonResponse({'error': str(e)})
+# @csrf_exempt
+# def create_checkout_session(request):
+#     if request.method == 'POST':
+#         data = json.loads(request.body)
+#         price_per_item = data.get('price_per_item', 0)  # Get price per item
+
+#         try:
+#             session = stripe.checkout.Session.create(
+#                 payment_method_types=['card'],
+#                 line_items=[
+#                     {
+#                         'price_data': {
+#                             'currency': 'usd',
+#                             'product_data': {
+#                                 'name': 'Your Product Name',  # Replace with actual product name
+#                             },
+#                             'unit_amount': int(price_per_item * 100),  # price in cents
+#                         },
+#                         'quantity': 1,  # Default quantity to 1
+#                     }
+#                 ],
+#                 mode='payment',
+#                 success_url='http://localhost:3000/success',
+#                 cancel_url='http://localhost:3000/cancel',
+#             )
+#             return JsonResponse({'id': session.id})
+#         except Exception as e:
+#             return JsonResponse({'error': str(e)})
 
 
 # @api_view(["GET", "POST", "PUT", "DELETE"])
@@ -329,3 +394,6 @@ def update_order(request, order_id):
         return Response({"message": "Order updated successfully"})
     except Order.DoesNotExist:
         return Response({"error": "Order not found"}, status=status.HTTP_404_NOT_FOUND)
+    
+
+

@@ -49,6 +49,8 @@ const ChangePassword = lazy(() =>
     import("../ui/changepassword/ChangePassword")
 );
 const Logout = lazy(() => import("../ui/logout/Logout"));
+const SuccessPage = lazy (() => import("../pages/payment-success"));
+const CancelPage = lazy (() => import("../pages/payment-cancel"));
 
 export default function AppRoute() {
     return (
@@ -164,6 +166,8 @@ export default function AppRoute() {
                             element={<ChangePassword />}
                         />
                         <Route path="logout" element={<Logout />} />
+                        <Route path="success" element={<SuccessPage />} />
+                        <Route path="cancel" element={<CancelPage />} />
                     </Route>
                 </Routes>
             </BrowserRouter>
